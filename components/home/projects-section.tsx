@@ -8,9 +8,12 @@ import { SectionHeader } from "@/components/shared/section-header";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-import { FEATURED_PROJECTS, PROJECTS_CONTENT } from "@/constants/home";
+import { PROJECTS_CONTENT } from "@/constants/projects";
+import { getFeaturedProjects, getProjectCardProps } from "@/lib/projects";
 
 export function ProjectsSection() {
+  const featuredProjects = getFeaturedProjects().map(getProjectCardProps);
+
   return (
     <Section spacing="lg" background="muted" aria-label="Featured projects">
       <Container>
@@ -21,9 +24,9 @@ export function ProjectsSection() {
         />
 
         <div className="grid auto-rows-auto grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {FEATURED_PROJECTS.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <m.div
-              key={project.title}
+              key={project.href}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}

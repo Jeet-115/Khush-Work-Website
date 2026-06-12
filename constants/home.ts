@@ -150,55 +150,6 @@ export const WHY_CHOOSE_US: FeatureItem[] = [
   },
 ];
 
-export type ProjectItem = {
-  title: string;
-  category: string;
-  location: string;
-  image: string;
-  href: string;
-  featured?: boolean;
-};
-
-export const FEATURED_PROJECTS: ProjectItem[] = [
-  {
-    title: "Skyline Residence",
-    category: "Residential",
-    location: "Rajkot, Gujarat",
-    image: "/images/projects/project-1.svg",
-    href: "/projects/skyline-residence",
-    featured: true,
-  },
-  {
-    title: "Meridian Corporate Tower",
-    category: "Commercial",
-    location: "Ahmedabad, Gujarat",
-    image: "/images/projects/project-2.svg",
-    href: "/projects/meridian-tower",
-  },
-  {
-    title: "Villa Serene",
-    category: "Residential",
-    location: "Surat, Gujarat",
-    image: "/images/projects/project-3.svg",
-    href: "/projects/villa-serene",
-  },
-  {
-    title: "Horizon Mall Facade",
-    category: "Structural Glazing",
-    location: "Vadodara, Gujarat",
-    image: "/images/projects/project-4.svg",
-    href: "/projects/horizon-mall",
-    featured: true,
-  },
-  {
-    title: "Azure Office Park",
-    category: "Office Partitions",
-    location: "Gandhinagar, Gujarat",
-    image: "/images/projects/project-5.svg",
-    href: "/projects/azure-office",
-  },
-];
-
 export type TestimonialItem = {
   name: string;
   role: string;
@@ -268,13 +219,6 @@ export const WHY_CHOOSE_CONTENT = {
   title: "The Standard of Excellence You Deserve",
   description:
     "Every project reflects our commitment to precision, premium materials, and uncompromising craftsmanship.",
-} as const;
-
-export const PROJECTS_CONTENT = {
-  eyebrow: "Featured Work",
-  title: "Projects That Define Spaces",
-  description:
-    "A selection of residential and commercial installations showcasing our architectural aluminium expertise.",
 } as const;
 
 export const TESTIMONIALS_CONTENT = {
