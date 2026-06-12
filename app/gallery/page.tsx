@@ -2,24 +2,28 @@ import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { GalleryJsonLd } from "@/components/gallery/gallery-json-ld";
 import { GallerySection } from "@/components/gallery";
 import { PageHero } from "@/components/shared/page-hero";
-import { GALLERY_CONTENT, GALLERY_SEO_KEYWORDS } from "@/constants/gallery";
-import { SITE_NAME } from "@/constants/site";
+import { BreadcrumbJsonLd } from "@/components/seo";
+import { GALLERY_CONTENT } from "@/constants/gallery";
+import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  ...createPageMetadata({
-    title: "Gallery",
-    description:
-      "Browse our premium gallery of aluminium windows, sliding doors, glass partitions, ACP cladding, structural glazing, false ceiling, and interior work across Gujarat.",
-    path: "/gallery",
-  }),
-  keywords: [...GALLERY_SEO_KEYWORDS, SITE_NAME],
-};
+export const metadata = createPageMetadata({
+  title: PAGE_SEO.gallery.title,
+  description: PAGE_SEO.gallery.description,
+  path: PAGE_SEO.gallery.path,
+  keywords: PAGE_SEO.gallery.keywords,
+});
 
 export default function GalleryPage() {
   return (
     <>
       <GalleryJsonLd />
+      <BreadcrumbJsonLd
+        items={[
+          BREADCRUMB_HOME,
+          { name: "Gallery", path: PAGE_SEO.gallery.path },
+        ]}
+      />
       <PageHero
         eyebrow={GALLERY_CONTENT.eyebrow}
         title="Visual Portfolio"

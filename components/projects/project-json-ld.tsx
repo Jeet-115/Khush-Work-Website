@@ -1,3 +1,4 @@
+import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getProjectJsonLd } from "@/lib/projects";
 import type { Project } from "@/types/projects";
 
@@ -6,12 +7,5 @@ type ProjectJsonLdProps = {
 };
 
 export function ProjectJsonLd({ project }: ProjectJsonLdProps) {
-  const schema = getProjectJsonLd(project);
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLdScript data={getProjectJsonLd(project)} />;
 }

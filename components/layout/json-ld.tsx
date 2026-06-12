@@ -1,12 +1,6 @@
-import { getLocalBusinessJsonLd } from "@/lib/schema/local-business";
+import { JsonLdScript } from "@/components/seo/json-ld-script";
+import { getOrganizationGraphJsonLd } from "@/lib/schema/local-business";
 
 export function JsonLd() {
-  const schema = getLocalBusinessJsonLd();
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLdScript data={getOrganizationGraphJsonLd()} />;
 }

@@ -1,15 +1,17 @@
 import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { ProjectsGrid } from "@/components/projects";
 import { PageHero } from "@/components/shared/page-hero";
+import { BreadcrumbJsonLd } from "@/components/seo";
 import { PROJECTS_CONTENT } from "@/constants/projects";
+import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { getAllProjects } from "@/lib/projects";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Projects",
-  description:
-    "Browse completed residential and commercial aluminium projects by Shree Chamunda Aluminium across Gujarat.",
-  path: "/projects",
+  title: PAGE_SEO.projects.title,
+  description: PAGE_SEO.projects.description,
+  path: PAGE_SEO.projects.path,
+  keywords: PAGE_SEO.projects.keywords,
 });
 
 export default function ProjectsPage() {
@@ -17,6 +19,12 @@ export default function ProjectsPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          BREADCRUMB_HOME,
+          { name: "Projects", path: PAGE_SEO.projects.path },
+        ]}
+      />
       <PageHero
         eyebrow={PROJECTS_CONTENT.eyebrow}
         title={PROJECTS_CONTENT.title}

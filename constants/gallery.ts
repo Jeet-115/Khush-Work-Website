@@ -4,17 +4,17 @@ export const GALLERY_CONTENT = {
   eyebrow: "Gallery",
   title: "Craftsmanship in Every Detail",
   description:
-    "Explore our portfolio of aluminium windows, sliding doors, glass partitions, facades, and interior executions across Gujarat.",
+    "Explore our portfolio of aluminium windows, sliding doors, glass partitions, facades, and interior executions across Vadodara and Gujarat.",
 } as const;
 
 export const GALLERY_SEO_KEYWORDS = [
+  "aluminium windows vadodara",
+  "sliding doors vadodara",
+  "glass partitions vadodara",
+  "ACP cladding vadodara",
   "aluminium windows gallery",
-  "sliding doors installation",
-  "glass partitions Gujarat",
-  "ACP cladding projects",
   "structural glazing portfolio",
-  "false ceiling work",
-  "interior aluminium work",
+  "false ceiling work vadodara",
   "Shree Chamunda Aluminium gallery",
 ] as const;
 

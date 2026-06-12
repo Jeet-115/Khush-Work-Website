@@ -1,18 +1,26 @@
 import { ContactSection } from "@/components/contact";
 import { PageHero } from "@/components/shared/page-hero";
+import { BreadcrumbJsonLd } from "@/components/seo";
 import { CONTACT_PAGE_CONTENT } from "@/constants/contact";
+import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Contact",
-  description:
-    "Request a free quote from Shree Chamunda Aluminium. Send an enquiry for aluminium windows, doors, glazing, and interior solutions across Gujarat.",
-  path: "/contact",
+  title: PAGE_SEO.contact.title,
+  description: PAGE_SEO.contact.description,
+  path: PAGE_SEO.contact.path,
+  keywords: PAGE_SEO.contact.keywords,
 });
 
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          BREADCRUMB_HOME,
+          { name: "Contact", path: PAGE_SEO.contact.path },
+        ]}
+      />
       <PageHero
         eyebrow={CONTACT_PAGE_CONTENT.eyebrow}
         title={CONTACT_PAGE_CONTENT.title}

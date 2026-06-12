@@ -14,11 +14,11 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Slim-profile, thermally efficient windows designed for panoramic views and lasting performance.",
     metaDescription:
-      "Premium aluminium windows in Gujarat by Shree Chamunda Aluminium. Slim profiles, thermal efficiency, custom sizes, and expert installation for homes and commercial buildings.",
+      "Premium aluminium windows in Vadodara by Shree Chamunda Aluminium. Slim profiles, thermal efficiency, custom sizes, and expert installation for homes and commercial buildings.",
     keywords: [
+      "aluminium windows vadodara",
       "aluminium windows",
-      "aluminium window manufacturer",
-      "slim profile windows",
+      "aluminium window manufacturer vadodara",
       "thermal break windows Gujarat",
     ],
     hero: {
@@ -112,12 +112,12 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Seamless indoor-outdoor transitions with smooth-gliding, weather-sealed sliding systems.",
     metaDescription:
-      "Premium aluminium sliding doors in Gujarat. Smooth-gliding systems for patios, balconies, and commercial entrances with weather sealing and slim profiles.",
+      "Premium aluminium sliding doors in Vadodara, Gujarat. Smooth-gliding systems for patios, balconies, and commercial entrances with weather sealing and slim profiles.",
     keywords: [
+      "sliding doors vadodara",
       "sliding doors",
-      "aluminium sliding doors",
+      "aluminium sliding doors vadodara",
       "patio sliding doors Gujarat",
-      "balcony sliding systems",
     ],
     hero: {
       title: "Sliding Doors",
@@ -205,12 +205,12 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Elegant glass divisions that maximise light while defining sophisticated workspaces.",
     metaDescription:
-      "Glass partition systems for offices and homes in Gujarat. Frameless and framed solutions with acoustic options, premium hardware, and professional installation.",
+      "Glass partition systems for offices and homes in Vadodara, Gujarat. Frameless and framed solutions with acoustic options, premium hardware, and professional installation.",
     keywords: [
+      "glass partitions vadodara",
       "glass partitions",
-      "office glass walls",
+      "office glass walls vadodara",
       "frameless glass partitions Gujarat",
-      "interior glass dividers",
     ],
     hero: {
       title: "Glass Partitions",
@@ -298,12 +298,12 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Durable aluminium composite panel facades with striking finishes and weather resistance.",
     metaDescription:
-      "ACP cladding and aluminium composite panel facades in Gujarat. Weather-resistant exterior cladding with premium finishes for commercial and residential buildings.",
+      "ACP cladding and aluminium composite panel facades in Vadodara, Gujarat. Weather-resistant exterior cladding with premium finishes for commercial and residential buildings.",
     keywords: [
+      "ACP cladding vadodara",
       "ACP cladding",
-      "aluminium composite panels",
+      "aluminium composite panels vadodara",
       "building facade cladding Gujarat",
-      "exterior ACP installation",
     ],
     hero: {
       title: "ACP Cladding",

@@ -1,7 +1,9 @@
+import { SEO_LOCATION } from "@/constants/location";
+
 export const SITE_NAME = "Shree Chamunda Aluminium";
 
 export const SITE_DESCRIPTION =
-  "Premium aluminium solutions for residential, commercial, and industrial projects.";
+  `Premium aluminium windows, sliding doors, glass partitions, and ACP cladding in ${SEO_LOCATION.city}, ${SEO_LOCATION.state}. Expert fabrication and installation for residential and commercial projects.`;
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreechamundaaluminium.com";
@@ -9,11 +11,13 @@ export const SITE_URL =
 export const SITE_LOCALE = "en_IN";
 
 export const SITE_KEYWORDS = [
-  "aluminium",
-  "aluminium windows",
-  "aluminium doors",
-  "sliding systems",
-  "facade solutions",
+  "aluminium windows vadodara",
+  "sliding doors vadodara",
+  "glass partitions vadodara",
+  "ACP cladding vadodara",
+  "structural glazing vadodara",
+  "aluminium fabricator vadodara",
+  "aluminium windows Gujarat",
   "Shree Chamunda Aluminium",
 ] as const;
 

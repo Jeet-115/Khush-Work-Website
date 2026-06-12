@@ -1,17 +1,22 @@
 import { BUSINESS } from "@/constants/business";
+import { SEO_LOCATION } from "@/constants/location";
+import { PRIMARY_KEYWORDS } from "@/constants/seo";
+import { SITE_NAME } from "@/constants/site";
+
+const BUSINESS_ID = `${BUSINESS.url}/#localbusiness`;
+const WEBSITE_ID = `${BUSINESS.url}/#website`;
 
 export function getLocalBusinessJsonLd() {
   return {
-    "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": `${BUSINESS.url}/#localbusiness`,
+    "@id": BUSINESS_ID,
     name: BUSINESS.name,
     description: BUSINESS.description,
     url: BUSINESS.url,
     email: BUSINESS.email,
     telephone: BUSINESS.telephone,
     priceRange: BUSINESS.priceRange,
-    image: `${BUSINESS.url}/images/og-image.jpg`,
+    image: `${BUSINESS.url}/images/og-image.svg`,
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS.address.streetAddress,
@@ -25,6 +30,17 @@ export function getLocalBusinessJsonLd() {
       latitude: BUSINESS.geo.latitude,
       longitude: BUSINESS.geo.longitude,
     },
+    areaServed: [
+      {
+        "@type": "City",
+        name: SEO_LOCATION.city,
+      },
+      {
+        "@type": "State",
+        name: SEO_LOCATION.state,
+      },
+    ],
+    knowsAbout: PRIMARY_KEYWORDS.slice(0, 6),
     openingHoursSpecification: BUSINESS.openingHours.map((hours) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: hours.dayOfWeek,
@@ -32,5 +48,26 @@ export function getLocalBusinessJsonLd() {
       closes: hours.closes,
     })),
     ...(BUSINESS.sameAs.length > 0 ? { sameAs: BUSINESS.sameAs } : {}),
+  };
+}
+
+export function getWebsiteJsonLd() {
+  return {
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    url: BUSINESS.url,
+    name: SITE_NAME,
+    description: BUSINESS.description,
+    inLanguage: "en-IN",
+    publisher: {
+      "@id": BUSINESS_ID,
+    },
+  };
+}
+
+export function getOrganizationGraphJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [getLocalBusinessJsonLd(), getWebsiteJsonLd()],
   };
 }

@@ -1,12 +1,6 @@
+import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getGalleryJsonLd } from "@/lib/gallery";
 
 export function GalleryJsonLd() {
-  const schema = getGalleryJsonLd();
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLdScript data={getGalleryJsonLd()} />;
 }

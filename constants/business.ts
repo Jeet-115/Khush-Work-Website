@@ -13,15 +13,15 @@ export const BUSINESS = {
   telephone: CONTACT.phone,
   priceRange: "$$",
   address: {
-    streetAddress: "Industrial Area, Phase 1",
-    addressLocality: "Rajkot",
+    streetAddress: "Makarpura Industrial Estate",
+    addressLocality: "Vadodara",
     addressRegion: "Gujarat",
-    postalCode: "360001",
+    postalCode: "390010",
     addressCountry: "IN",
   },
   geo: {
-    latitude: 22.3039,
-    longitude: 70.8022,
+    latitude: 22.2587,
+    longitude: 73.1964,
   },
   openingHours: [
     {

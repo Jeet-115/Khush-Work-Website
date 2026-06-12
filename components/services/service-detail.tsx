@@ -6,6 +6,8 @@ import { ServiceGallery } from "@/components/services/service-gallery";
 import { ServiceHero } from "@/components/services/service-hero";
 import { ServiceJsonLd } from "@/components/services/service-json-ld";
 import { ServiceOverview } from "@/components/services/service-overview";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo";
+import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import type { Service } from "@/types/services";
 
 type ServiceDetailProps = {
@@ -16,6 +18,17 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
   return (
     <>
       <ServiceJsonLd service={service} />
+      <FaqJsonLd items={service.faq} />
+      <BreadcrumbJsonLd
+        items={[
+          BREADCRUMB_HOME,
+          { name: "Services", path: PAGE_SEO.services.path },
+          {
+            name: service.title,
+            path: `/services/${service.slug}`,
+          },
+        ]}
+      />
       <ServiceHero service={service} />
       <ServiceOverview service={service} />
       <ServiceBenefits service={service} />

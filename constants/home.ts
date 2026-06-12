@@ -208,9 +208,9 @@ export const FAQ_ITEMS: FaqItem[] = [
       "Absolutely. We work with certified aluminium profiles, toughened glass, and hardware from trusted manufacturers to ensure durability and performance.",
   },
   {
-    question: "Do you serve areas outside Rajkot?",
+    question: "Do you serve areas outside Vadodara?",
     answer:
-      "Yes. We serve clients across Gujarat including Ahmedabad, Surat, Vadodara, and Gandhinagar, with installation teams available for major project locations.",
+      "Yes. We are based in Vadodara and serve clients across Gujarat including Ahmedabad, Surat, Rajkot, and Gandhinagar, with installation teams available for major project locations.",
   },
 ];
 
