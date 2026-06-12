@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
-import { getGalleryImageSrc } from "@/lib/cloudinary";
 import { useLockBody } from "@/hooks/use-lock-body";
+import { luxuryEase } from "@/lib/motion";
 import type { GalleryItem } from "@/types/gallery";
 
 type GalleryLightboxProps = {
@@ -75,10 +75,10 @@ export function GalleryLightbox({
           />
 
           <m.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, scale: 0.96, y: 12 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={{ duration: 0.3, ease: luxuryEase }}
             className="relative z-10 mx-4 flex w-full max-w-5xl flex-col"
           >
             <div className="mb-4 flex items-center justify-between gap-4">
@@ -86,7 +86,11 @@ export function GalleryLightbox({
                 <p className="font-heading text-brand-white text-lg font-semibold">
                   {activeItem.title}
                 </p>
-                <p className="text-brand-silver text-sm">
+                <p
+                  className="text-brand-silver text-sm"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
                   {activeIndex! + 1} of {items.length}
                 </p>
               </div>
@@ -103,19 +107,26 @@ export function GalleryLightbox({
               </Button>
             </div>
 
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-black md:aspect-[16/10]">
-              <Image
-                src={getGalleryImageSrc(activeItem, {
-                  width: 1600,
-                  quality: "auto",
-                })}
-                alt={activeItem.alt}
-                fill
-                sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-contain"
-                priority
-              />
-            </div>
+            <AnimatePresence mode="wait">
+              <m.div
+                key={activeItem.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-black md:aspect-[16/10]"
+              >
+                <Image
+                  src={activeItem.src}
+                  alt={activeItem.alt}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  quality={90}
+                  className="object-contain"
+                  priority
+                />
+              </m.div>
+            </AnimatePresence>
 
             {items.length > 1 && (
               <div className="mt-4 flex items-center justify-center gap-3">

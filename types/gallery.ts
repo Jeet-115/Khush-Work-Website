@@ -1,11 +1,12 @@
 export type GalleryCategory =
   | "all"
-  | "residential"
-  | "commercial"
-  | "windows-doors"
-  | "glass"
-  | "facades"
-  | "interiors";
+  | "aluminium-windows"
+  | "sliding-doors"
+  | "glass-partitions"
+  | "acp-cladding"
+  | "structural-glazing"
+  | "false-ceiling"
+  | "interior-work";
 
 export type GalleryItem = {
   id: string;
@@ -13,7 +14,6 @@ export type GalleryItem = {
   category: Exclude<GalleryCategory, "all">;
   alt: string;
   src: string;
-  cloudinaryPublicId?: string;
   width: number;
   height: number;
 };

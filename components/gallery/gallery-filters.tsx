@@ -1,6 +1,9 @@
 "use client";
 
+import { m } from "framer-motion";
+
 import { GALLERY_CATEGORIES } from "@/constants/gallery";
+import { luxuryEase } from "@/lib/motion";
 import type { GalleryCategory } from "@/types/gallery";
 import { cn } from "@/lib/utils";
 
@@ -18,20 +21,23 @@ export function GalleryFilters({
   return (
     <div
       className={cn("flex flex-wrap justify-center gap-2", className)}
-      role="group"
+      role="toolbar"
       aria-label="Filter gallery by category"
     >
-      {GALLERY_CATEGORIES.map((cat) => {
+      {GALLERY_CATEGORIES.map((cat, index) => {
         const isActive = activeCategory === cat.value;
 
         return (
-          <button
+          <m.button
             key={cat.value}
             type="button"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: index * 0.04, ease: luxuryEase }}
             onClick={() => onCategoryChange(cat.value)}
             aria-pressed={isActive}
             className={cn(
-              "duration-normal rounded-full px-4 py-2 text-sm font-medium transition-all",
+              "rounded-full px-4 py-2 text-sm font-medium transition-all duration-normal",
               "focus-visible:ring-brand-teal focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
               isActive
                 ? "bg-brand-teal text-brand-white shadow-sm"
@@ -39,7 +45,7 @@ export function GalleryFilters({
             )}
           >
             {cat.label}
-          </button>
+          </m.button>
         );
       })}
     </div>

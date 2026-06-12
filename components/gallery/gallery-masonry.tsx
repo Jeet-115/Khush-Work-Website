@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 import { GalleryLightbox } from "@/components/gallery/gallery-lightbox";
-import { getGalleryImageSrc } from "@/lib/cloudinary";
 import { luxuryEase } from "@/lib/motion";
 import type { GalleryItem } from "@/types/gallery";
 import { cn } from "@/lib/utils";
@@ -19,7 +18,10 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
 
   if (items.length === 0) {
     return (
-      <p className="text-muted-foreground py-16 text-center text-base">
+      <p
+        className="text-muted-foreground py-16 text-center text-base"
+        role="status"
+      >
         No images found for this category.
       </p>
     );
@@ -37,12 +39,12 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
             key={item.id}
             role="listitem"
             layout
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96 }}
+            exit={{ opacity: 0, scale: 0.95 }}
             transition={{
-              duration: 0.4,
-              delay: Math.min(index * 0.04, 0.3),
+              duration: 0.45,
+              delay: Math.min(index * 0.05, 0.35),
               ease: luxuryEase,
             }}
             className="mb-4 break-inside-avoid sm:mb-6"
@@ -61,17 +63,15 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
                 style={{ aspectRatio: `${item.width} / ${item.height}` }}
               >
                 <Image
-                  src={getGalleryImageSrc(item, {
-                    width: 800,
-                    quality: "auto",
-                  })}
+                  src={item.src}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   loading={index < 4 ? "eager" : "lazy"}
-                  className="duration-slow object-cover transition-transform group-hover:scale-105"
+                  quality={85}
+                  className="object-cover transition-transform duration-slow group-hover:scale-105"
                 />
-                <div className="from-brand-charcoal/70 duration-normal absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-4 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                <div className="from-brand-charcoal/70 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-4 opacity-0 transition-opacity duration-normal group-hover:opacity-100 group-focus-visible:opacity-100">
                   <span className="font-heading text-brand-white text-left text-sm font-medium">
                     {item.title}
                   </span>
