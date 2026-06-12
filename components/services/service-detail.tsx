@@ -1,0 +1,28 @@
+import { ContactCtaSection } from "@/components/home/contact-cta-section";
+import { ServiceBenefits } from "@/components/services/service-benefits";
+import { ServiceFaq } from "@/components/services/service-faq";
+import { ServiceFeatures } from "@/components/services/service-features";
+import { ServiceGallery } from "@/components/services/service-gallery";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceJsonLd } from "@/components/services/service-json-ld";
+import { ServiceOverview } from "@/components/services/service-overview";
+import type { Service } from "@/types/services";
+
+type ServiceDetailProps = {
+  service: Service;
+};
+
+export function ServiceDetail({ service }: ServiceDetailProps) {
+  return (
+    <>
+      <ServiceJsonLd service={service} />
+      <ServiceHero service={service} />
+      <ServiceOverview service={service} />
+      <ServiceBenefits service={service} />
+      <ServiceFeatures service={service} />
+      <ServiceGallery service={service} />
+      <ServiceFaq service={service} />
+      <ContactCtaSection />
+    </>
+  );
+}

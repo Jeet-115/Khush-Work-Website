@@ -58,56 +58,56 @@ export const SERVICES: ServiceItem[] = [
     title: "Aluminium Windows",
     description:
       "Slim-profile, thermally efficient windows designed for panoramic views and lasting performance.",
-    href: "/services#aluminium-windows",
+    href: "/services/aluminium-windows",
   },
   {
     icon: DoorOpen,
     title: "Sliding Doors",
     description:
       "Seamless indoor-outdoor transitions with smooth-gliding, weather-sealed sliding systems.",
-    href: "/services#sliding-doors",
+    href: "/services/sliding-doors",
   },
   {
     icon: Columns3,
     title: "Glass Partitions",
     description:
       "Elegant glass divisions that maximise light while defining sophisticated workspaces.",
-    href: "/services#glass-partitions",
+    href: "/services/glass-partitions",
   },
   {
     icon: Layers,
     title: "ACP Cladding",
     description:
       "Durable aluminium composite panel facades with striking finishes and weather resistance.",
-    href: "/services#acp-cladding",
+    href: "/services/acp-cladding",
   },
   {
     icon: Building2,
     title: "Structural Glazing",
     description:
       "Frameless glass architecture for landmark commercial and residential facades.",
-    href: "/services#structural-glazing",
+    href: "/services/structural-glazing",
   },
   {
     icon: LayoutGrid,
     title: "Office Partitions",
     description:
       "Modular office systems that balance privacy, acoustics, and contemporary aesthetics.",
-    href: "/services#office-partitions",
+    href: "/services/office-partitions",
   },
   {
     icon: PanelTop,
     title: "False Ceiling",
     description:
       "Refined ceiling solutions integrating lighting, HVAC, and clean architectural lines.",
-    href: "/services#false-ceiling",
+    href: "/services/false-ceiling",
   },
   {
     icon: Paintbrush,
     title: "Interior Work",
     description:
       "End-to-end interior execution — from concept to completion with meticulous detail.",
-    href: "/services#interior-work",
+    href: "/services/interior-work",
   },
 ];
 

@@ -1,18 +1,28 @@
-import { PlaceholderPage } from "@/components/layout/placeholder-page";
+import { ContactCtaSection } from "@/components/home/contact-cta-section";
+import { ServicesGrid } from "@/components/services";
+import { PageHero } from "@/components/shared/page-hero";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
   title: "Services",
   description:
-    "Explore our aluminium windows, doors, sliding systems, facades, and custom fabrication services.",
+    "Explore premium aluminium windows, sliding doors, glass partitions, ACP cladding, structural glazing, office partitions, false ceiling, and interior work by Shree Chamunda Aluminium.",
   path: "/services",
 });
 
 export default function ServicesPage() {
   return (
-    <PlaceholderPage
-      title="Our Services"
-      description="From bespoke window systems to large-scale facade installations — precision engineering for every project."
-    />
+    <>
+      <PageHero
+        eyebrow="Our Services"
+        title="Complete Aluminium & Glass Solutions"
+        description="Eight specialised disciplines. One commitment to architectural precision and premium craftsmanship."
+        image="/images/services/aluminium-windows/hero.svg"
+        imageAlt="Shree Chamunda Aluminium services overview"
+        ariaLabel="Services page hero"
+      />
+      <ServicesGrid />
+      <ContactCtaSection />
+    </>
   );
 }
