@@ -40,22 +40,8 @@ export const contactFormSchema = z.object({
     .max(1000, "Message must be at most 1000 characters."),
 });
 
-export const contactApiSchema = contactFormSchema.extend({
-  botcheck: z.boolean().optional(),
-  website: z.string().optional(),
-});
-
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
-export type ContactApiValues = z.infer<typeof contactApiSchema>;
 
-export function isSpamSubmission(data: Pick<ContactApiValues, "botcheck" | "website">) {
-  if (data.botcheck === true) {
-    return true;
-  }
-
-  if (data.website && data.website.trim().length > 0) {
-    return true;
-  }
-
-  return false;
+export function isHoneypotTriggered(botcheck: boolean, website: string) {
+  return botcheck || website.trim().length > 0;
 }

@@ -22,15 +22,28 @@ import { SITE_NAME } from "@/constants/site";
 import { luxuryEase } from "@/lib/motion";
 import {
   contactFormSchema,
+  isHoneypotTriggered,
   type ContactFormValues,
 } from "@/lib/validations/contact";
-import type { ContactApiResponse } from "@/types/contact";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-async function submitToWeb3FormsClient(data: ContactFormValues) {
+type Web3FormsResponse = {
+  success: boolean;
+  message?: string;
+  body?: { message?: string };
+};
+
+async function submitToWeb3Forms(
+  data: ContactFormValues,
+  honeypot: { botcheck: boolean; website: string },
+) {
+  if (isHoneypotTriggered(honeypot.botcheck, honeypot.website)) {
+    return;
+  }
+
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
   if (!accessKey) {
@@ -55,9 +68,7 @@ async function submitToWeb3FormsClient(data: ContactFormValues) {
     }),
   });
 
-  const result = (await response.json()) as ContactApiResponse & {
-    body?: { message?: string };
-  };
+  const result = (await response.json()) as Web3FormsResponse;
 
   if (!response.ok || !result.success) {
     throw new Error(
@@ -96,29 +107,10 @@ export function ContactForm() {
     setStatusMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          botcheck: botcheckRef.current?.checked ?? false,
-          website: websiteRef.current?.value ?? "",
-        }),
+      await submitToWeb3Forms(data, {
+        botcheck: botcheckRef.current?.checked ?? false,
+        website: websiteRef.current?.value ?? "",
       });
-
-      const result = (await response.json()) as ContactApiResponse;
-
-      if (!response.ok || !result.success) {
-        throw new Error(
-          result.message ?? CONTACT_PAGE_CONTENT.form.errorMessage,
-        );
-      }
-
-      if ("clientSubmit" in result && result.clientSubmit) {
-        await submitToWeb3FormsClient(data);
-      }
 
       setStatus("success");
       setStatusMessage(CONTACT_PAGE_CONTENT.form.successMessage);

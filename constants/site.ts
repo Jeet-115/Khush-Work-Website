@@ -5,8 +5,7 @@ export const SITE_NAME = "Shree Chamunda Aluminium";
 export const SITE_DESCRIPTION =
   `Premium aluminium windows, sliding doors, glass partitions, and ACP cladding in ${SEO_LOCATION.city}, ${SEO_LOCATION.state}. Expert fabrication and installation for residential and commercial projects.`;
 
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://shreechamundaaluminium.com";
+export const SITE_URL = "https://shreechamundaaluminium.com";
 
 export const SITE_LOCALE = "en_IN";
 

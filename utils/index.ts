@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/constants/site";
+
 export function formatPhoneNumber(phone: string): string {
   const digits = phone.replace(/\D/g, "");
 
@@ -9,7 +11,5 @@ export function formatPhoneNumber(phone: string): string {
 }
 
 export function absoluteUrl(path: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
-  return new URL(path, baseUrl).toString();
+  return new URL(path, SITE_URL).toString();
 }
