@@ -1,4 +1,3 @@
-import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { ProjectCompletion } from "@/components/projects/project-completion";
 import { ProjectDescription } from "@/components/projects/project-description";
 import { ProjectGallery } from "@/components/projects/project-gallery";
@@ -7,6 +6,7 @@ import { ProjectJsonLd } from "@/components/projects/project-json-ld";
 import { ProjectServices } from "@/components/projects/project-services";
 import { BreadcrumbJsonLd } from "@/components/seo";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
+import { DynamicContactCtaSection } from "@/lib/performance";
 import type { Project } from "@/types/projects";
 
 type ProjectDetailProps = {
@@ -32,7 +32,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
       <ProjectGallery project={project} />
       <ProjectServices project={project} />
       <ProjectCompletion project={project} />
-      <ContactCtaSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

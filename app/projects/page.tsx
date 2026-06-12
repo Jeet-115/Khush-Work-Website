@@ -1,4 +1,3 @@
-import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { ProjectsGrid } from "@/components/projects";
 import { PageHero } from "@/components/shared/page-hero";
 import { BreadcrumbJsonLd } from "@/components/seo";
@@ -6,6 +5,7 @@ import { PROJECTS_CONTENT } from "@/constants/projects";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { getAllProjects } from "@/lib/projects";
 import { createPageMetadata } from "@/lib/metadata";
+import { DynamicContactCtaSection } from "@/lib/performance";
 
 export const metadata = createPageMetadata({
   title: PAGE_SEO.projects.title,
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         ariaLabel="Projects page hero"
       />
       <ProjectsGrid projects={projects} />
-      <ContactCtaSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

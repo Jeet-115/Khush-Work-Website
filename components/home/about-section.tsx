@@ -11,7 +11,7 @@ import { ABOUT_CONTENT, ABOUT_STATS } from "@/constants/home";
 
 export function AboutSection() {
   return (
-    <Section spacing="lg" background="muted" aria-label="About us">
+    <Section spacing="lg" background="muted" aria-label="About us" defer>
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <m.div

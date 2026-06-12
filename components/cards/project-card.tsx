@@ -1,7 +1,7 @@
 import { ArrowUpRight, MapPin } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -35,11 +35,11 @@ export function ProjectCard({
       >
         <div className="relative h-full min-h-[inherit] w-full">
           <div className="from-brand-charcoal via-brand-charcoal/70 to-brand-teal/30 absolute inset-0 bg-gradient-to-br" />
-          <Image
+          <OptimizedImage
             src={image}
             alt={title}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizePreset="card"
             className="duration-slow object-cover transition-transform group-hover:scale-105"
           />
           <div className="from-brand-charcoal/90 via-brand-charcoal/30 absolute inset-0 bg-gradient-to-t to-transparent" />

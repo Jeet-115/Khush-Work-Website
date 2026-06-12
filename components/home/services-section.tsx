@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export function ServicesSection() {
   return (
-    <Section spacing="lg" aria-label="Our services">
+    <Section spacing="lg" aria-label="Our services" defer>
       <Container>
         <SectionHeader
           eyebrow="Our Services"

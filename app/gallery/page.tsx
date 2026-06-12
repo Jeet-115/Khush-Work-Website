@@ -1,4 +1,3 @@
-import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { GalleryJsonLd } from "@/components/gallery/gallery-json-ld";
 import { GallerySection } from "@/components/gallery";
 import { PageHero } from "@/components/shared/page-hero";
@@ -6,6 +5,7 @@ import { BreadcrumbJsonLd } from "@/components/seo";
 import { GALLERY_CONTENT } from "@/constants/gallery";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
+import { DynamicContactCtaSection } from "@/lib/performance";
 
 export const metadata = createPageMetadata({
   title: PAGE_SEO.gallery.title,
@@ -33,7 +33,7 @@ export default function GalleryPage() {
         ariaLabel="Gallery page hero"
       />
       <GallerySection />
-      <ContactCtaSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

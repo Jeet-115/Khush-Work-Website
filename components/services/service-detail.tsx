@@ -1,4 +1,3 @@
-import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { ServiceBenefits } from "@/components/services/service-benefits";
 import { ServiceFaq } from "@/components/services/service-faq";
 import { ServiceFeatures } from "@/components/services/service-features";
@@ -8,6 +7,7 @@ import { ServiceJsonLd } from "@/components/services/service-json-ld";
 import { ServiceOverview } from "@/components/services/service-overview";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
+import { DynamicContactCtaSection } from "@/lib/performance";
 import type { Service } from "@/types/services";
 
 type ServiceDetailProps = {
@@ -35,7 +35,7 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
       <ServiceFeatures service={service} />
       <ServiceGallery service={service} />
       <ServiceFaq service={service} />
-      <ContactCtaSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

@@ -2,9 +2,9 @@
 
 import { AnimatePresence, m } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import Image from "next/image";
 import { useCallback, useEffect, useRef } from "react";
 
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Button } from "@/components/ui/button";
 import { useLockBody } from "@/hooks/use-lock-body";
 import { luxuryEase } from "@/lib/motion";
@@ -116,7 +116,7 @@ export function GalleryLightbox({
                 transition={{ duration: 0.2 }}
                 className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-black md:aspect-[16/10]"
               >
-                <Image
+                <OptimizedImage
                   src={activeItem.src}
                   alt={activeItem.alt}
                   fill

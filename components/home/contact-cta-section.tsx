@@ -39,7 +39,7 @@ const contactMethods = [
 
 export function ContactCtaSection() {
   return (
-    <Section spacing="lg" background="teal" aria-label="Contact us">
+    <Section spacing="lg" background="teal" aria-label="Contact us" defer>
       <Container>
         <m.div
           initial={{ opacity: 0, y: 24 }}

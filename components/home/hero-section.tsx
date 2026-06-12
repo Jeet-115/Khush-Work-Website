@@ -2,9 +2,9 @@
 
 import { m } from "framer-motion";
 import { MessageCircle, Phone } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { CTA_NAV } from "@/constants/navigation";
@@ -21,12 +21,12 @@ export function HeroSection() {
     >
       <div className="absolute inset-0">
         <div className="from-brand-charcoal via-brand-charcoal/80 to-brand-teal/40 absolute inset-0 z-10 bg-gradient-to-br" />
-        <Image
+        <OptimizedImage
           src={HERO_CONTENT.image}
           alt={HERO_CONTENT.imageAlt}
           fill
           priority
-          sizes="100vw"
+          sizePreset="hero"
           className="object-cover"
         />
       </div>

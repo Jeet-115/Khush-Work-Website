@@ -50,7 +50,7 @@ export function TestimonialsSection() {
   const goPrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
 
   return (
-    <Section spacing="lg" aria-label="Testimonials">
+    <Section spacing="lg" aria-label="Testimonials" defer>
       <Container>
         <SectionHeader
           eyebrow={TESTIMONIALS_CONTENT.eyebrow}

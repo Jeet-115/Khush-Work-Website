@@ -1,8 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
-import Image from "next/image";
-
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Container } from "@/components/ui/container";
 import { luxuryEase } from "@/lib/motion";
 
@@ -30,12 +29,12 @@ export function PageHero({
     >
       <div className="absolute inset-0">
         <div className="from-brand-charcoal via-brand-charcoal/85 to-brand-teal/30 absolute inset-0 z-10 bg-gradient-to-br" />
-        <Image
+        <OptimizedImage
           src={image}
           alt={imageAlt}
           fill
           priority
-          sizes="100vw"
+          sizePreset="hero"
           className="object-cover"
         />
       </div>

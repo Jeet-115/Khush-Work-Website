@@ -1,17 +1,17 @@
-import {
-  AboutSection,
-  ContactCtaSection,
-  FaqSection,
-  HeroSection,
-  ProjectsSection,
-  ServicesSection,
-  TestimonialsSection,
-  WhyChooseUsSection,
-} from "@/components/home";
+import { HeroSection } from "@/components/home/hero-section";
 import { FaqJsonLd } from "@/components/seo";
 import { FAQ_ITEMS } from "@/constants/home";
 import { PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
+import {
+  DynamicAboutSection,
+  DynamicContactCtaSection,
+  DynamicFaqSection,
+  DynamicProjectsSection,
+  DynamicServicesSection,
+  DynamicTestimonialsSection,
+  DynamicWhyChooseUsSection,
+} from "@/lib/performance";
 
 export const metadata = createPageMetadata({
   title: PAGE_SEO.home.title,
@@ -25,13 +25,13 @@ export default function HomePage() {
     <>
       <FaqJsonLd items={FAQ_ITEMS} />
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <ProjectsSection />
-      <TestimonialsSection />
-      <FaqSection />
-      <ContactCtaSection />
+      <DynamicAboutSection />
+      <DynamicServicesSection />
+      <DynamicWhyChooseUsSection />
+      <DynamicProjectsSection />
+      <DynamicTestimonialsSection />
+      <DynamicFaqSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

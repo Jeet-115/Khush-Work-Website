@@ -16,6 +16,7 @@ export function FaqSection() {
       spacing="lg"
       background="muted"
       aria-label="Frequently asked questions"
+      defer
     >
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">

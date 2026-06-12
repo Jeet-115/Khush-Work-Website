@@ -2,8 +2,7 @@
 
 import { m } from "framer-motion";
 import { MapPin } from "lucide-react";
-import Image from "next/image";
-
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import type { Project } from "@/types/projects";
@@ -21,12 +20,12 @@ export function ProjectHero({ project }: ProjectHeroProps) {
     >
       <div className="absolute inset-0">
         <div className="from-brand-charcoal via-brand-charcoal/70 to-brand-teal/20 absolute inset-0 z-10 bg-gradient-to-t" />
-        <Image
+        <OptimizedImage
           src={project.coverImage}
           alt={project.name}
           fill
           priority
-          sizes="100vw"
+          sizePreset="hero"
           className="object-cover"
         />
       </div>

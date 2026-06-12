@@ -1,11 +1,19 @@
 "use client";
 
 import { m } from "framer-motion";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { useState } from "react";
 
-import { GalleryLightbox } from "@/components/gallery/gallery-lightbox";
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { luxuryEase } from "@/lib/motion";
+
+const GalleryLightbox = dynamic(
+  () =>
+    import("@/components/gallery/gallery-lightbox").then((module) => ({
+      default: module.GalleryLightbox,
+    })),
+  { ssr: false },
+);
 import type { GalleryItem } from "@/types/gallery";
 import { cn } from "@/lib/utils";
 
@@ -62,13 +70,12 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
                 className="relative w-full"
                 style={{ aspectRatio: `${item.width} / ${item.height}` }}
               >
-                <Image
+                <OptimizedImage
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  loading={index < 4 ? "eager" : "lazy"}
-                  quality={85}
+                  sizePreset="gallery"
+                  priority={index < 2}
                   className="object-cover transition-transform duration-slow group-hover:scale-105"
                 />
                 <div className="from-brand-charcoal/70 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-4 opacity-0 transition-opacity duration-normal group-hover:opacity-100 group-focus-visible:opacity-100">
@@ -82,12 +89,14 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
         ))}
       </div>
 
-      <GalleryLightbox
-        items={items}
-        activeIndex={lightboxIndex}
-        onClose={() => setLightboxIndex(null)}
-        onNavigate={setLightboxIndex}
-      />
+      {lightboxIndex !== null ? (
+        <GalleryLightbox
+          items={items}
+          activeIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={setLightboxIndex}
+        />
+      ) : null}
     </>
   );
 }

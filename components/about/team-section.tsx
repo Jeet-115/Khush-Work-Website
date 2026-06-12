@@ -1,8 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
-import Image from "next/image";
-
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { SectionHeader } from "@/components/shared/section-header";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -11,7 +10,7 @@ import { luxuryEase } from "@/lib/motion";
 
 export function TeamSection() {
   return (
-    <Section spacing="lg" background="muted" aria-label="Our team">
+    <Section spacing="lg" background="muted" aria-label="Our team" defer>
       <Container>
         <SectionHeader
           eyebrow={TEAM_CONTENT.eyebrow}
@@ -34,11 +33,11 @@ export function TeamSection() {
               className="bg-brand-white shadow-card hover:shadow-luxury group duration-normal overflow-hidden rounded-xl border transition-shadow"
             >
               <div className="bg-brand-light-grey relative aspect-square overflow-hidden">
-                <Image
+                <OptimizedImage
                   src={member.image}
                   alt={member.name}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizePreset="gallery"
                   className="duration-slow object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="from-brand-charcoal/50 duration-normal absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity group-hover:opacity-100" />

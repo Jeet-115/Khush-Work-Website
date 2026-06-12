@@ -189,3 +189,10 @@
     @apply font-heading tracking-tight;
   }
 }
+
+@layer utilities {
+  .content-deferred {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
+  }
+}

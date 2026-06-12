@@ -1,8 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
-import Image from "next/image";
-
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Container } from "@/components/ui/container";
 import type { Service } from "@/types/services";
 import { luxuryEase } from "@/lib/motion";
@@ -19,12 +18,12 @@ export function ServiceHero({ service }: ServiceHeroProps) {
     >
       <div className="absolute inset-0">
         <div className="from-brand-charcoal via-brand-charcoal/90 to-brand-teal/25 absolute inset-0 z-10 bg-gradient-to-br" />
-        <Image
+        <OptimizedImage
           src={service.hero.image}
           alt={service.hero.imageAlt}
           fill
           priority
-          sizes="100vw"
+          sizePreset="hero"
           className="object-cover"
         />
       </div>

@@ -1,8 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
-import Image from "next/image";
-
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { COMPANY_STORY } from "@/constants/about";
@@ -10,7 +9,7 @@ import { luxuryEase, slideInLeft, slideInRight } from "@/lib/motion";
 
 export function CompanyStorySection() {
   return (
-    <Section spacing="lg" aria-label="Company story">
+    <Section spacing="lg" aria-label="Company story" defer>
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <m.div
@@ -49,11 +48,11 @@ export function CompanyStorySection() {
             className="relative"
           >
             <div className="shadow-luxury relative aspect-[4/5] overflow-hidden rounded-2xl">
-              <Image
+              <OptimizedImage
                 src={COMPANY_STORY.image}
                 alt="Shree Chamunda Aluminium company story"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizePreset="content"
                 className="object-cover"
               />
               <div className="from-brand-charcoal/60 absolute inset-0 bg-gradient-to-t to-transparent" />

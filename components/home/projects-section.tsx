@@ -15,7 +15,7 @@ export function ProjectsSection() {
   const featuredProjects = getFeaturedProjects().map(getProjectCardProps);
 
   return (
-    <Section spacing="lg" background="muted" aria-label="Featured projects">
+    <Section spacing="lg" background="muted" aria-label="Featured projects" defer>
       <Container>
         <SectionHeader
           eyebrow={PROJECTS_CONTENT.eyebrow}

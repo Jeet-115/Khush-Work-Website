@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useState } from "react";
@@ -47,7 +47,7 @@ export function MobileNav() {
       <AnimatePresence>
         {open && (
           <>
-            <motion.button
+            <m.button
               type="button"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ export function MobileNav() {
               onClick={close}
             />
 
-            <motion.nav
+            <m.nav
               id={menuId}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -88,7 +88,7 @@ export function MobileNav() {
 
               <ul className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
                 {MAIN_NAV.map((item, index) => (
-                  <motion.li
+                  <m.li
                     key={item.href}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -102,7 +102,7 @@ export function MobileNav() {
                         "hover:bg-brand-light-grey",
                       )}
                     />
-                  </motion.li>
+                  </m.li>
                 ))}
               </ul>
 
@@ -116,7 +116,7 @@ export function MobileNav() {
                   {CTA_NAV.label}
                 </Button>
               </div>
-            </motion.nav>
+            </m.nav>
           </>
         )}
       </AnimatePresence>

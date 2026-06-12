@@ -6,10 +6,10 @@ import {
   TimelineSection,
   ValuesSection,
 } from "@/components/about";
-import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { BreadcrumbJsonLd } from "@/components/seo";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
+import { DynamicContactCtaSection } from "@/lib/performance";
 
 export const metadata = createPageMetadata({
   title: PAGE_SEO.about.title,
@@ -33,7 +33,7 @@ export default function AboutPage() {
       <ValuesSection />
       <TimelineSection />
       <TeamSection />
-      <ContactCtaSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

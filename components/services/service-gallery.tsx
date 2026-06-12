@@ -1,8 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
-import Image from "next/image";
-
+import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import type { Service } from "@/types/services";
@@ -15,7 +14,7 @@ type ServiceGalleryProps = {
 
 export function ServiceGallery({ service }: ServiceGalleryProps) {
   return (
-    <Section spacing="lg" background="muted" aria-label="Service gallery">
+    <Section spacing="lg" background="muted" aria-label="Service gallery" defer>
       <Container>
         <div className="mb-12 text-center md:mb-16">
           <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
@@ -44,11 +43,11 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
                 index !== 0 && "aspect-[4/3]",
               )}
             >
-              <Image
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes="(max-width: 768px) 50vw, 25vw"
+                sizePreset="gallery"
                 className="duration-slow object-cover transition-transform hover:scale-105"
               />
             </m.figure>

@@ -28,6 +28,7 @@ const sectionVariants = cva("w-full", {
 type SectionProps = ComponentProps<"section"> &
   VariantProps<typeof sectionVariants> & {
     labelledBy?: string;
+    defer?: boolean;
   };
 
 function Section({
@@ -35,13 +36,18 @@ function Section({
   spacing,
   background,
   labelledBy,
+  defer = false,
   children,
   ...props
 }: SectionProps) {
   return (
     <section
       data-slot="section"
-      className={cn(sectionVariants({ spacing, background, className }))}
+      className={cn(
+        sectionVariants({ spacing, background }),
+        defer && "content-deferred",
+        className,
+      )}
       aria-labelledby={labelledBy}
       {...props}
     >

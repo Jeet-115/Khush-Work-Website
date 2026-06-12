@@ -1,9 +1,9 @@
-import { ContactCtaSection } from "@/components/home/contact-cta-section";
 import { ServicesGrid } from "@/components/services";
 import { PageHero } from "@/components/shared/page-hero";
 import { BreadcrumbJsonLd } from "@/components/seo";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
+import { DynamicContactCtaSection } from "@/lib/performance";
 
 export const metadata = createPageMetadata({
   title: PAGE_SEO.services.title,
@@ -30,7 +30,7 @@ export default function ServicesPage() {
         ariaLabel="Services page hero"
       />
       <ServicesGrid />
-      <ContactCtaSection />
+      <DynamicContactCtaSection />
     </>
   );
 }

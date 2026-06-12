@@ -8,7 +8,7 @@ import { WHY_CHOOSE_CONTENT, WHY_CHOOSE_US } from "@/constants/home";
 
 export function WhyChooseUsSection() {
   return (
-    <Section spacing="lg" background="charcoal" aria-label="Why choose us">
+    <Section spacing="lg" background="charcoal" aria-label="Why choose us" defer>
       <Container>
         <SectionHeader
           id="why-choose-us-heading"
