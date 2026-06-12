@@ -1,6 +1,3 @@
-"use client";
-
-import { m } from "framer-motion";
 import { Mail, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -41,13 +38,7 @@ export function ContactCtaSection() {
   return (
     <Section spacing="lg" background="teal" aria-label="Contact us" defer>
       <Container>
-        <m.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto max-w-4xl text-center"
-        >
+        <div className="mx-auto max-w-4xl text-center">
           <SectionHeader
             eyebrow={CONTACT_CTA_CONTENT.eyebrow}
             title={CONTACT_CTA_CONTENT.title}
@@ -56,22 +47,18 @@ export function ContactCtaSection() {
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {contactMethods.map((method, index) => {
+            {contactMethods.map((method) => {
               const Icon = method.icon;
 
               return (
-                <m.a
+                <a
                   key={method.label}
                   href={method.href}
                   {...(method.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
                   className={cn(
-                    "bg-brand-white/10 hover:bg-brand-white/15 group duration-normal flex flex-col items-center gap-3 rounded-xl border border-white/10 p-6 backdrop-blur-sm transition-colors",
+                    "border border-white/10 bg-white/5 hover:bg-white/10 duration-normal flex flex-col items-center gap-3 rounded-xl p-6 transition-colors",
                     "focus-visible:ring-brand-white focus-visible:ring-offset-brand-teal focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
                   )}
                 >
@@ -89,7 +76,7 @@ export function ContactCtaSection() {
                       {method.value}
                     </p>
                   </div>
-                </m.a>
+                </a>
               );
             })}
           </div>
@@ -103,7 +90,7 @@ export function ContactCtaSection() {
               {CTA_NAV.label}
             </Button>
           </div>
-        </m.div>
+        </div>
       </Container>
     </Section>
   );

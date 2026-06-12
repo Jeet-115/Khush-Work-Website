@@ -1,4 +1,5 @@
 export {
+  DynamicTrustMarquee,
   DynamicAboutSection,
   DynamicContactCtaSection,
   DynamicContactForm,

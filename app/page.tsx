@@ -4,6 +4,7 @@ import { FAQ_ITEMS } from "@/constants/home";
 import { PAGE_SEO } from "@/constants/seo";
 import { createPageMetadata } from "@/lib/metadata";
 import {
+  DynamicTrustMarquee,
   DynamicAboutSection,
   DynamicContactCtaSection,
   DynamicFaqSection,
@@ -25,6 +26,7 @@ export default function HomePage() {
     <>
       <FaqJsonLd items={FAQ_ITEMS} />
       <HeroSection />
+      <DynamicTrustMarquee />
       <DynamicAboutSection />
       <DynamicServicesSection />
       <DynamicWhyChooseUsSection />

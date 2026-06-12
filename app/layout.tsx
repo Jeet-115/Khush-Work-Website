@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 
-import { Footer, Header, JsonLd, SkipLink } from "@/components/layout";
+import {
+  Footer,
+  Header,
+  JsonLd,
+  PageTransition,
+  ScrollToTop,
+  SkipLink,
+} from "@/components/layout";
 import { AppProviders } from "@/components/providers";
 import { fontVariables } from "@/lib/fonts";
 import { baseMetadata, viewport } from "@/lib/metadata";
@@ -19,6 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="flex min-h-full flex-col">
         <JsonLd />
         <AppProviders>
+          <ScrollToTop />
           <SkipLink />
           <Header />
           <main
@@ -26,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             className="flex flex-1 flex-col"
             tabIndex={-1}
           >
-            {children}
+            <PageTransition>{children}</PageTransition>
           </main>
           <Footer />
         </AppProviders>

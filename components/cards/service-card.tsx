@@ -21,11 +21,11 @@ export function ServiceCard({
   return (
     <article
       className={cn(
-        "group bg-brand-white shadow-card hover:shadow-luxury duration-normal flex h-full flex-col rounded-xl border p-6 transition-all md:p-8",
+        "group bg-brand-white shadow-card hover:shadow-luxury duration-normal flex h-full flex-col rounded-xl border p-6 transition-shadow md:p-8",
         className,
       )}
     >
-      <div className="bg-brand-teal/10 text-brand-teal mb-6 flex size-12 items-center justify-center rounded-xl">
+      <div className="bg-brand-teal/10 text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-white mb-6 flex size-12 items-center justify-center rounded-xl transition-colors duration-300">
         <Icon className="size-6" aria-hidden="true" />
       </div>
       <h3 className="font-heading text-brand-charcoal mb-3 text-xl font-semibold">

@@ -1,6 +1,3 @@
-"use client";
-
-import { m } from "framer-motion";
 import Link from "next/link";
 
 import { ProjectCard } from "@/components/cards/project-card";
@@ -24,21 +21,13 @@ export function ProjectsSection() {
         />
 
         <div className="grid auto-rows-auto grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project, index) => (
-            <m.div
+          {featuredProjects.map((project) => (
+            <div
               key={project.href}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
-                ease: [0.22, 1, 0.36, 1],
-              }}
               className={project.featured ? "md:row-span-2" : undefined}
             >
               <ProjectCard {...project} />
-            </m.div>
+            </div>
           ))}
         </div>
 

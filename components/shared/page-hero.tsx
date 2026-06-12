@@ -1,9 +1,6 @@
-"use client";
-
-import { m } from "framer-motion";
+import { DotPattern } from "@/components/magic/dot-pattern";
 import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Container } from "@/components/ui/container";
-import { luxuryEase } from "@/lib/motion";
 
 export type PageHeroProps = {
   eyebrow: string;
@@ -28,7 +25,7 @@ export function PageHero({
       aria-label={ariaLabel}
     >
       <div className="absolute inset-0">
-        <div className="from-brand-charcoal via-brand-charcoal/85 to-brand-teal/30 absolute inset-0 z-10 bg-gradient-to-br" />
+        <div className="from-brand-charcoal via-brand-charcoal/80 to-brand-teal/40 absolute inset-0 z-10 bg-gradient-to-br" />
         <OptimizedImage
           src={image}
           alt={imageAlt}
@@ -37,34 +34,20 @@ export function PageHero({
           sizePreset="hero"
           className="object-cover"
         />
+        <DotPattern className="z-10 opacity-20" />
       </div>
 
       <Container className="relative z-20 py-24 md:py-32">
         <div className="max-w-3xl">
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: luxuryEase }}
-            className="text-brand-teal mb-4 text-sm font-medium tracking-[0.25em] uppercase"
-          >
+          <p className="text-brand-teal motion-safe-fade-up mb-4 text-sm font-medium tracking-[0.25em] uppercase">
             {eyebrow}
-          </m.p>
-          <m.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: luxuryEase }}
-            className="font-heading text-brand-white mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl"
-          >
+          </p>
+          <h1 className="font-heading text-brand-white motion-safe-fade-up motion-delay-100 mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
             {title}
-          </m.h1>
-          <m.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: luxuryEase }}
-            className="text-brand-silver max-w-2xl text-base leading-relaxed md:text-lg"
-          >
+          </h1>
+          <p className="text-brand-silver motion-safe-fade-up motion-delay-200 max-w-2xl text-base leading-relaxed md:text-lg">
             {description}
-          </m.p>
+          </p>
         </div>
       </Container>
     </section>

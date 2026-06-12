@@ -176,6 +176,10 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
@@ -194,5 +198,92 @@
   .content-deferred {
     content-visibility: auto;
     contain-intrinsic-size: auto 600px;
+  }
+
+  .glass-surface {
+    @apply border border-white/10 bg-white/5;
+  }
+
+  .glass-surface-light {
+    @apply border-brand-light-grey/60 bg-brand-white/95;
+  }
+
+  .motion-safe-fade-up {
+    animation: fade-up 0.55s var(--ease-luxury) both;
+  }
+
+  .motion-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .motion-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .motion-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .motion-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .bg-size-\[var\(--shiny-width\)_100\%\] {
+    background-size: var(--shiny-width) 100%;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer-pass {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shiny-text {
+  0% {
+    background-position: calc(-100% - var(--shiny-width)) 0;
+  }
+  100% {
+    background-position: calc(100% + var(--shiny-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.animate-shiny-text {
+  animation: shiny-text 4s linear infinite;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-safe-fade-up,
+  .animate-shiny-text,
+  .animate-marquee {
+    animation: none;
   }
 }

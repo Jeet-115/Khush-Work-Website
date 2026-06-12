@@ -5,4 +5,6 @@ export { Logo } from "@/components/layout/logo";
 export { MobileNav } from "@/components/layout/mobile-nav";
 export { Navbar } from "@/components/layout/navbar";
 export { NavLink } from "@/components/layout/nav-link";
+export { PageTransition } from "@/components/layout/page-transition";
+export { ScrollToTop } from "@/components/layout/scroll-to-top";
 export { SkipLink } from "@/components/layout/skip-link";

@@ -2,6 +2,14 @@ import dynamic from "next/dynamic";
 
 import { FormFallback, SectionFallback } from "@/components/shared/section-fallback";
 
+export const DynamicTrustMarquee = dynamic(
+  () =>
+    import("@/components/home/trust-marquee").then((module) => ({
+      default: module.TrustMarquee,
+    })),
+  { loading: () => null },
+);
+
 export const DynamicAboutSection = dynamic(
   () =>
     import("@/components/home/about-section").then((module) => ({

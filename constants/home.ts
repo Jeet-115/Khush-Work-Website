@@ -235,6 +235,17 @@ export const FAQ_CONTENT = {
     "Everything you need to know about our products, process, and project delivery.",
 } as const;
 
+export const TRUST_MARQUEE_ITEMS = [
+  "Premium Aluminium Profiles",
+  "Toughened Safety Glass",
+  "10+ Years Experience",
+  "500+ Projects Delivered",
+  "Vadodara & Gujarat Wide",
+  "Free Site Consultation",
+  "Precision Installation",
+  "Architect-Approved Quality",
+] as const;
+
 export const CONTACT_CTA_CONTENT = {
   eyebrow: "Get In Touch",
   title: "Ready to Start Your Project?",

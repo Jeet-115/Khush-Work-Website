@@ -1,5 +1,3 @@
-"use client";
-
 import { FeatureCard } from "@/components/cards/feature-card";
 import { SectionHeader } from "@/components/shared/section-header";
 import { Container } from "@/components/ui/container";
@@ -19,8 +17,12 @@ export function WhyChooseUsSection() {
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {WHY_CHOOSE_US.map((feature, index) => (
-            <FeatureCard key={feature.title} {...feature} index={index} />
+          {WHY_CHOOSE_US.map((feature) => (
+            <FeatureCard
+              key={feature.title}
+              {...feature}
+              variant="glass"
+            />
           ))}
         </div>
       </Container>

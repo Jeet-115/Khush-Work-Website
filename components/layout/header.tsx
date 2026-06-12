@@ -19,8 +19,8 @@ export function Header() {
       className={cn(
         "duration-normal sticky top-0 z-40 w-full transition-[background-color,box-shadow,border-color]",
         scrolled
-          ? "border-brand-light-grey/80 bg-brand-white/90 shadow-sm backdrop-blur-md"
-          : "bg-brand-white border-transparent",
+          ? "border-brand-light-grey/80 bg-brand-white/95 shadow-sm"
+          : "border-transparent bg-brand-white/90",
         "border-b",
       )}
     >

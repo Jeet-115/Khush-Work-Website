@@ -40,14 +40,14 @@ export function ProjectCard({
             alt={title}
             fill
             sizePreset="card"
-            className="duration-slow object-cover transition-transform group-hover:scale-105"
+            className="duration-normal object-cover transition-transform group-hover:scale-105"
           />
           <div className="from-brand-charcoal/90 via-brand-charcoal/30 absolute inset-0 bg-gradient-to-t to-transparent" />
 
           <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 p-6 md:p-8">
             <Badge
               variant="teal"
-              className="bg-brand-teal/20 text-brand-white w-fit backdrop-blur-sm"
+              className="bg-brand-teal/20 text-brand-white w-fit"
             >
               {category}
             </Badge>
