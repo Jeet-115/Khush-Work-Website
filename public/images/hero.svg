@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <rect width="1920" height="1080" fill="#1A1A1A"/>
+  <rect x="200" y="200" width="800" height="680" stroke="#0A7B7B" stroke-width="2" fill="none" opacity="0.4"/>
+  <rect x="240" y="260" width="720" height="560" fill="#262626" opacity="0.8"/>
+  <line x1="600" y1="260" x2="600" y2="820" stroke="#A8ADB5" stroke-width="1" opacity="0.3"/>
+  <line x1="240" y1="480" x2="960" y2="480" stroke="#A8ADB5" stroke-width="1" opacity="0.3"/>
+  <rect x="1100" y="300" width="500" height="400" stroke="#0A7B7B" stroke-width="1" fill="#0A7B7B" opacity="0.15"/>
+  <text x="960" y="980" text-anchor="middle" fill="#A8ADB5" font-family="system-ui,sans-serif" font-size="18" opacity="0.5">Premium Aluminium Architecture</text>
+</svg>

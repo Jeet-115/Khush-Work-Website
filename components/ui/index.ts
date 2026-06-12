@@ -1,3 +1,10 @@
+export {
+  Accordion,
+  AccordionItem,
+  AccordionList,
+  type AccordionItemProps,
+} from "@/components/ui/accordion";
+export { AnimatedCounter } from "@/components/ui/animated-counter";
 export { Badge, badgeVariants, type BadgeProps } from "@/components/ui/badge";
 export {
   Button,
