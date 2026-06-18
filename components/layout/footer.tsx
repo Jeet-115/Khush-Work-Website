@@ -20,7 +20,7 @@ export function Footer() {
       <Container className="py-16 lg:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="space-y-4 lg:col-span-1">
-            <Logo className="[&_span:first-child]:text-brand-white [&_span:last-child]:text-brand-teal/90" />
+            <Logo variant="inverse" />
             <p className="text-brand-mist max-w-xs text-base leading-relaxed">
               {SITE_DESCRIPTION}
             </p>

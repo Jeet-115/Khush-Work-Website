@@ -8,6 +8,7 @@ import {
   SITE_LOCALE,
   SITE_NAME,
   SITE_URL,
+  BRAND_LOGO,
 } from "@/constants/site";
 
 type PageMetadataOptions = {
@@ -41,6 +42,11 @@ function buildOpenGraphImage(image?: string, imageAlt?: string) {
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [{ url: BRAND_LOGO.src, type: "image/png" }],
+    apple: [{ url: BRAND_LOGO.src, type: "image/png" }],
+    shortcut: [BRAND_LOGO.src],
+  },
   title: {
     default: `${SITE_NAME} | Aluminium Windows & Sliding Doors in ${SEO_LOCATION.city}`,
     template: `%s | ${SITE_NAME}`,

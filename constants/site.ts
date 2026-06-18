@@ -9,6 +9,11 @@ export const SITE_URL = "https://shreechamundaaluminium.com";
 
 export const SITE_LOCALE = "en_IN";
 
+export const BRAND_LOGO = {
+  src: "/logo.PNG",
+  alt: `${SITE_NAME} logo`,
+} as const;
+
 export const SITE_KEYWORDS = [
   "aluminium windows vadodara",
   "sliding doors vadodara",

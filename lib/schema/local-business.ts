@@ -1,10 +1,11 @@
 import { BUSINESS } from "@/constants/business";
 import { SEO_LOCATION } from "@/constants/location";
 import { PRIMARY_KEYWORDS } from "@/constants/seo";
-import { SITE_NAME } from "@/constants/site";
+import { BRAND_LOGO, SITE_NAME } from "@/constants/site";
 
 const BUSINESS_ID = `${BUSINESS.url}/#localbusiness`;
 const WEBSITE_ID = `${BUSINESS.url}/#website`;
+const LOGO_URL = `${BUSINESS.url}${BRAND_LOGO.src}`;
 
 export function getLocalBusinessJsonLd() {
   return {
@@ -16,7 +17,11 @@ export function getLocalBusinessJsonLd() {
     email: BUSINESS.email,
     telephone: BUSINESS.telephone,
     priceRange: BUSINESS.priceRange,
-    image: `${BUSINESS.url}/images/og-image.svg`,
+    image: LOGO_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: LOGO_URL,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS.address.streetAddress,

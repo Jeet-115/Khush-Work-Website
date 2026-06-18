@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useId, useState } from "react";
 
 import { NavLink } from "@/components/layout/nav-link";
+import { Logo } from "@/components/layout/logo";
 import { Button } from "@/components/ui/button";
 import { CTA_NAV, MAIN_NAV } from "@/constants/navigation";
 import { useLockBody } from "@/hooks/use-lock-body";
@@ -72,9 +73,7 @@ export function MobileNav() {
               aria-label="Mobile navigation"
             >
               <div className="flex items-center justify-between border-b px-6 py-4">
-                <span className="font-heading text-brand-charcoal text-lg font-semibold">
-                  Menu
-                </span>
+                <Logo className="pointer-events-none max-w-[70%]" />
                 <Button
                   type="button"
                   variant="ghost"
