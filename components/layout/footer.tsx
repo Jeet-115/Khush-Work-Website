@@ -10,7 +10,7 @@ import { CONTACT, SITE_DESCRIPTION, SITE_NAME } from "@/constants/site";
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
-  const fullAddress = `${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}`;
+  const fullAddress = BUSINESS.address.formatted;
 
   return (
     <footer

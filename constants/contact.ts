@@ -21,4 +21,12 @@ export const CONTACT_PAGE_CONTENT = {
     hours: "Monday – Saturday, 9:00 AM – 7:00 PM",
     addressTitle: "Office",
   },
+  map: {
+    eyebrow: "Location",
+    title: "Visit Our Office",
+    description:
+      "Find us at Ventage Point in Alkapuri, Vadodara — a short drive from Jetalpur Circle.",
+    directionsLabel: "Get Directions",
+    mapTitle: "Shree Chamunda Aluminium on Google Maps",
+  },
 } as const;

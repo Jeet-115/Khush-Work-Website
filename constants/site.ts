@@ -21,9 +21,9 @@ export const SITE_KEYWORDS = [
 ] as const;
 
 export const CONTACT = {
-  email: "info@shreechamundaaluminium.com",
-  phone: "+91 98765 43210",
-  whatsapp: "+91 98765 43210",
+  email: "scaluminium24@gmail.com",
+  phone: "+91 98240 32823",
+  whatsapp: "+91 98240 32823",
 } as const;
 
 export const CONTACT_LINKS = {

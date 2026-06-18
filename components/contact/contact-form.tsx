@@ -244,7 +244,7 @@ export function ContactForm() {
                   type="tel"
                   inputMode="tel"
                   autoComplete="tel"
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 98240 32823"
                   aria-invalid={Boolean(errors.phone)}
                   aria-describedby={
                     errors.phone ? `${formId}-phone-error` : undefined

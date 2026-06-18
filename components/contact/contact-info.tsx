@@ -41,10 +41,7 @@ const contactMethods = [
 ] as const;
 
 export function ContactInfo() {
-  const address = [
-    BUSINESS.address.streetAddress,
-    `${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}`,
-  ].join(", ");
+  const address = BUSINESS.address.formatted;
 
   return (
     <m.div
@@ -115,7 +112,9 @@ export function ContactInfo() {
             </div>
             <div>
               <p className="font-medium">{CONTACT_PAGE_CONTENT.info.addressTitle}</p>
-              <p className="text-muted-foreground mt-1 text-sm">{address}</p>
+              <address className="text-muted-foreground mt-1 text-sm not-italic">
+                {address}
+              </address>
             </div>
           </div>
         </CardContent>
