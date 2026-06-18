@@ -30,8 +30,8 @@ export function SectionHeader({
     >
       <p
         className={cn(
-          "mb-3 text-sm font-medium tracking-[0.2em] uppercase",
-          light ? "text-brand-teal/90" : "text-brand-teal",
+          "mb-3 text-sm font-semibold tracking-[0.18em] uppercase",
+          light ? "text-teal-300" : "text-brand-teal-ink",
         )}
       >
         {eyebrow}
@@ -39,7 +39,7 @@ export function SectionHeader({
       <h2
         id={id}
         className={cn(
-          "font-heading mb-4 text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl",
+          "font-heading mb-4 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl",
           light ? "text-brand-white" : "text-brand-charcoal",
         )}
       >
@@ -48,8 +48,8 @@ export function SectionHeader({
       {description && (
         <p
           className={cn(
-            "text-base leading-relaxed md:text-lg",
-            light ? "text-brand-silver" : "text-muted-foreground",
+            "text-lg leading-relaxed md:text-xl",
+            light ? "text-brand-mist" : "text-muted-foreground",
           )}
         >
           {description}

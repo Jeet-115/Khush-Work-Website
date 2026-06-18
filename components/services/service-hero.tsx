@@ -34,7 +34,7 @@ export function ServiceHero({ service }: ServiceHeroProps) {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: luxuryEase }}
-            className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase"
+            className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase"
           >
             Our Services
           </m.p>
@@ -50,7 +50,7 @@ export function ServiceHero({ service }: ServiceHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: luxuryEase }}
-            className="text-brand-silver text-base leading-relaxed md:text-lg"
+            className="text-brand-mist text-base leading-relaxed md:text-lg"
           >
             {service.hero.subtitle}
           </m.p>

@@ -10,6 +10,9 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "generate:projects": "node scripts/generate-work-projects.mjs",
+    "generate:services": "node scripts/generate-work-services.mjs",
+    "generate:work": "node scripts/generate-work-projects.mjs && node scripts/generate-work-services.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

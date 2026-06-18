@@ -34,7 +34,7 @@ function MissionVisionCard({
       <h3 className="font-heading text-brand-white mb-4 text-2xl font-semibold">
         {title}
       </h3>
-      <p className="text-brand-silver text-base leading-relaxed">
+      <p className="text-brand-mist text-base leading-relaxed">
         {description}
       </p>
     </m.article>

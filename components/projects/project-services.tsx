@@ -18,7 +18,7 @@ export function ProjectServices({ project }: ProjectServicesProps) {
     <Section spacing="lg" aria-label="Services used">
       <Container>
         <div className="mb-10 md:mb-12">
-          <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+          <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
             Services Used
           </p>
           <h2 className="font-heading text-brand-charcoal text-3xl font-semibold tracking-tight md:text-4xl">

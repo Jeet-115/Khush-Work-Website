@@ -16,7 +16,7 @@ export function ServiceFeatures({ service }: ServiceFeaturesProps) {
     <Section spacing="lg" aria-label="Service features">
       <Container>
         <div className="mb-12 text-center md:mb-16">
-          <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+          <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
             Features
           </p>
           <h2 className="font-heading text-brand-charcoal text-3xl font-semibold tracking-tight md:text-4xl">
@@ -41,7 +41,7 @@ export function ServiceFeatures({ service }: ServiceFeaturesProps) {
               <h3 className="font-heading text-brand-charcoal mb-2 font-medium">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 {feature.description}
               </p>
             </m.div>

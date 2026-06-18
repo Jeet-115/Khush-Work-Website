@@ -17,10 +17,10 @@ export function Logo({ className }: LogoProps) {
       )}
       aria-label={`${SITE_NAME} — Home`}
     >
-      <span className="font-heading text-brand-charcoal text-lg font-semibold tracking-tight sm:text-xl">
+      <span className="font-heading text-brand-charcoal text-xl font-bold tracking-tight sm:text-2xl">
         Shree Chamunda
       </span>
-      <span className="text-brand-teal mt-0.5 text-[0.65rem] font-medium tracking-[0.2em] uppercase sm:text-xs">
+      <span className="text-brand-teal-ink mt-0.5 text-xs font-semibold tracking-[0.18em] uppercase sm:text-sm">
         Aluminium
       </span>
     </Link>

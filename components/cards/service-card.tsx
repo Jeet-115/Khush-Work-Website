@@ -31,12 +31,12 @@ export function ServiceCard({
       <h3 className="font-heading text-brand-charcoal mb-3 text-xl font-semibold">
         {title}
       </h3>
-      <p className="text-muted-foreground mb-6 flex-1 text-sm leading-relaxed">
+      <p className="text-muted-foreground mb-6 flex-1 text-base leading-relaxed">
         {description}
       </p>
       <Link
         href={href}
-        className="text-brand-teal hover:text-brand-teal/80 focus-visible:ring-brand-teal inline-flex items-center gap-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+        className="text-brand-teal-ink hover:text-brand-teal focus-visible:ring-brand-teal inline-flex items-center gap-2 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
       >
         Learn More
         <ArrowRight

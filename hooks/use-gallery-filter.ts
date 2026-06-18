@@ -2,9 +2,10 @@
 
 import { useMemo, useState } from "react";
 
-import { GALLERY_ITEMS } from "@/constants/gallery";
-import { filterGalleryItems } from "@/lib/gallery";
+import { filterGalleryItems, getAllGalleryItems } from "@/lib/gallery";
 import type { GalleryCategory, GalleryItem } from "@/types/gallery";
+
+const GALLERY_ITEMS = getAllGalleryItems();
 
 export function useGalleryFilter(initialCategory: GalleryCategory = "all") {
   const [category, setCategory] = useState<GalleryCategory>(initialCategory);

@@ -11,7 +11,7 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
     <Section spacing="lg">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+          <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
             Coming Soon
           </p>
           <h1 className="font-heading text-brand-charcoal mb-4 text-4xl font-semibold tracking-tight md:text-5xl">

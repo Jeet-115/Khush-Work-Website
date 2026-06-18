@@ -25,7 +25,7 @@ export function NavLink({
     return (
       <span
         className={cn(
-          "text-muted-foreground cursor-not-allowed text-sm font-medium",
+          "text-muted-foreground cursor-not-allowed text-base font-medium",
           className,
         )}
         aria-disabled="true"
@@ -40,9 +40,9 @@ export function NavLink({
       href={href}
       onClick={onClick}
       className={cn(
-        "duration-normal relative text-sm font-medium transition-colors",
+        "duration-normal relative text-base font-medium transition-colors",
         "hover:text-brand-teal focus-visible:ring-brand-teal rounded-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
-        isActive ? "text-brand-teal" : "text-brand-charcoal/80",
+        isActive ? "text-brand-teal" : "text-brand-charcoal",
         className,
       )}
       aria-current={isActive ? "page" : undefined}

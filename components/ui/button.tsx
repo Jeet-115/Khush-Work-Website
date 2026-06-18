@@ -36,10 +36,10 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:ring-destructive/30",
       },
       size: {
-        default: "h-10 px-5 text-sm",
-        sm: "h-8 rounded-md px-3.5 text-xs",
+        default: "h-11 px-5 text-base",
+        sm: "h-9 rounded-md px-4 text-sm",
         lg: "h-12 rounded-xl px-7 text-base",
-        xl: "h-14 rounded-xl px-8 text-base tracking-wide",
+        xl: "h-14 rounded-xl px-8 text-lg tracking-wide",
         icon: "size-10",
         "icon-sm": "size-8",
         "icon-lg": "size-12",

@@ -10,6 +10,9 @@
   --color-brand-white: var(--brand-white);
   --color-brand-teal: var(--brand-teal);
   --color-brand-silver: var(--brand-silver);
+  --color-brand-slate: var(--brand-slate);
+  --color-brand-mist: var(--brand-mist);
+  --color-brand-teal-ink: var(--brand-teal-ink);
   --color-brand-light-grey: var(--brand-light-grey);
 
   /* Semantic tokens */
@@ -97,6 +100,18 @@
 
   /* Easing */
   --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Type scale — slightly larger for readability */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.375rem;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.625rem;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.3125rem;
+  --text-xl--line-height: 1.875rem;
 }
 
 :root {
@@ -104,7 +119,10 @@
   --brand-charcoal: #1a1a1a;
   --brand-white: #ffffff;
   --brand-teal: #0a7b7b;
+  --brand-teal-ink: #086262;
   --brand-silver: #a8adb5;
+  --brand-slate: #5c6370;
+  --brand-mist: #d1d5db;
   --brand-light-grey: #f4f4f5;
 
   /* Semantic mapping */
@@ -119,7 +137,7 @@
   --secondary: var(--brand-light-grey);
   --secondary-foreground: var(--brand-charcoal);
   --muted: var(--brand-light-grey);
-  --muted-foreground: var(--brand-silver);
+  --muted-foreground: var(--brand-slate);
   --accent: #e6f5f5;
   --accent-foreground: var(--brand-teal);
   --destructive: #dc2626;
@@ -154,7 +172,7 @@
   --secondary: #333333;
   --secondary-foreground: var(--brand-white);
   --muted: #333333;
-  --muted-foreground: var(--brand-silver);
+  --muted-foreground: #c5c9d0;
   --accent: #043131;
   --accent-foreground: #66c2c2;
   --destructive: #f87171;
@@ -178,10 +196,11 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 106.25%;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans text-base leading-relaxed antialiased;
   }
 
   h1,
@@ -190,7 +209,11 @@
   h4,
   h5,
   h6 {
-    @apply font-heading tracking-tight;
+    @apply font-heading font-semibold tracking-tight text-foreground;
+  }
+
+  p {
+    @apply leading-relaxed;
   }
 }
 

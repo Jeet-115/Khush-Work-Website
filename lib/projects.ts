@@ -1,4 +1,4 @@
-import { PROJECTS } from "@/constants/projects";
+import { PROJECTS } from "@/constants/work-projects.generated";
 import { SEO_LOCATION } from "@/constants/location";
 import { DEFAULT_OG_IMAGE } from "@/constants/seo";
 import { SITE_NAME, SITE_URL } from "@/constants/site";

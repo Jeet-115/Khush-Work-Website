@@ -2,7 +2,6 @@ import { MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 
 import { DotPattern } from "@/components/magic/dot-pattern";
-import { GradientText } from "@/components/magic/gradient-text";
 import { HeroStats } from "@/components/home/hero-stats";
 import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Button } from "@/components/ui/button";
@@ -38,22 +37,15 @@ export function HeroSection() {
 
       <Container className="relative z-20 py-28 md:py-36 lg:py-40">
         <div className="max-w-4xl">
-          <p className="text-brand-teal motion-safe-fade-up mb-6 text-sm font-medium tracking-[0.25em] uppercase">
+          <p className="text-teal-300 motion-safe-fade-up mb-6 text-sm font-semibold tracking-[0.2em] uppercase">
             Shree Chamunda Aluminium
           </p>
 
-          <h1 className="font-heading motion-safe-fade-up motion-delay-100 mb-6 text-4xl leading-[1.08] font-semibold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
-            <GradientText
-              from="from-brand-white"
-              via="via-brand-silver"
-              to="to-brand-teal"
-              className="block"
-            >
-              {HERO_CONTENT.headline}
-            </GradientText>
+          <h1 className="font-heading text-brand-white motion-safe-fade-up motion-delay-100 mb-6 text-4xl leading-[1.08] font-bold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+            {HERO_CONTENT.headline}
           </h1>
 
-          <p className="text-brand-silver motion-safe-fade-up motion-delay-200 mb-10 max-w-2xl text-base leading-relaxed md:text-lg lg:text-xl">
+          <p className="text-brand-mist motion-safe-fade-up motion-delay-200 mb-10 max-w-2xl text-lg leading-relaxed md:text-xl lg:text-2xl">
             {HERO_CONTENT.subheading}
           </p>
 
@@ -69,7 +61,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="border-brand-white/25 text-brand-white hover:bg-brand-white/10 w-full bg-white/5 sm:w-auto"
+              className="border-white/30 text-brand-white hover:bg-white/10 w-full bg-white/10 sm:w-auto"
               render={
                 <a
                   href={CONTACT_LINKS.whatsapp}
@@ -84,7 +76,7 @@ export function HeroSection() {
             <Button
               variant="ghost"
               size="lg"
-              className="text-brand-white hover:bg-brand-white/10 w-full sm:w-auto"
+              className="text-brand-white hover:bg-white/10 w-full sm:w-auto"
               render={<a href={CONTACT_LINKS.phone} />}
             >
               <Phone className="size-4" aria-hidden="true" />
@@ -101,7 +93,7 @@ export function HeroSection() {
         aria-hidden="true"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-brand-silver text-[10px] tracking-[0.3em] uppercase">
+          <span className="text-brand-mist text-xs tracking-[0.25em] uppercase">
             Scroll
           </span>
           <div className="bg-brand-teal/60 h-10 w-px" />

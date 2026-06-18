@@ -17,7 +17,7 @@ export function ServiceBenefits({ service }: ServiceBenefitsProps) {
     <Section spacing="lg" background="muted" aria-label="Service benefits">
       <Container>
         <div className="mb-12 text-center md:mb-16">
-          <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+          <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
             Benefits
           </p>
           <h2 className="font-heading text-brand-charcoal text-3xl font-semibold tracking-tight md:text-4xl">
@@ -46,7 +46,7 @@ export function ServiceBenefits({ service }: ServiceBenefitsProps) {
               <h3 className="font-heading text-brand-charcoal mb-2 font-semibold">
                 {benefit.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 {benefit.description}
               </p>
             </m.article>

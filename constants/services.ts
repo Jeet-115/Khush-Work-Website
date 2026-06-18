@@ -573,104 +573,12 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    slug: "false-ceiling",
-    title: "False Ceiling",
-    shortDescription:
-      "Refined ceiling solutions integrating lighting, HVAC, and clean architectural lines.",
-    metaDescription:
-      "False ceiling installation in Gujarat. Gypsum, metal, and grid ceiling systems with integrated lighting and HVAC for offices and residences.",
-    keywords: [
-      "false ceiling",
-      "drop ceiling Gujarat",
-      "gypsum ceiling installation",
-      "office ceiling systems",
-    ],
-    hero: {
-      title: "False Ceiling",
-      subtitle:
-        "Elevate interiors with refined ceiling systems that conceal, integrate, and impress.",
-      image: "/images/services/false-ceiling/hero.svg",
-      imageAlt: "Modern false ceiling with integrated lighting",
-    },
-    overview: {
-      title: "Ceilings That Complete the Design",
-      paragraphs: [
-        "False ceilings transform raw concrete slabs into refined architectural surfaces. We design and install gypsum, metal, and grid ceiling systems that integrate lighting, air conditioning, and acoustic treatment.",
-        "From corporate offices to retail showrooms and luxury homes, our ceiling solutions deliver clean lines and functional performance.",
-      ],
-    },
-    benefits: [
-      {
-        title: "Concealed Services",
-        description:
-          "Hide wiring, ducting, and plumbing within the ceiling void.",
-      },
-      {
-        title: "Acoustic Improvement",
-        description: "Reduce echo and improve sound quality in large spaces.",
-      },
-      {
-        title: "Integrated Lighting",
-        description:
-          "Recessed, cove, and linear lighting seamlessly incorporated.",
-      },
-      {
-        title: "Thermal Comfort",
-        description: "Ceiling void improves HVAC distribution efficiency.",
-      },
-    ],
-    features: [
-      {
-        title: "Gypsum Board",
-        description: "Smooth, paintable surfaces for premium interiors.",
-      },
-      {
-        title: "Metal Ceilings",
-        description: "Perforated and linear metal systems for commercial use.",
-      },
-      {
-        title: "Grid Ceilings",
-        description: "Accessible tile systems for offices and retail.",
-      },
-      {
-        title: "Cove Lighting",
-        description: "Indirect lighting details for ambient atmosphere.",
-      },
-      {
-        title: "Acoustic Tiles",
-        description: "Sound-absorbing panels for auditoriums and offices.",
-      },
-      {
-        title: "Fire-Rated Systems",
-        description: "Compliant solutions for commercial building codes.",
-      },
-    ],
-    gallery: galleryFor("false-ceiling", "False Ceiling"),
-    faq: [
-      {
-        question: "What ceiling types do you install?",
-        answer:
-          "We install gypsum, POP, metal, and mineral fibre grid ceiling systems.",
-      },
-      {
-        question: "Can you integrate existing HVAC?",
-        answer:
-          "Yes. We coordinate with HVAC layouts to integrate diffusers and ducting within the ceiling.",
-      },
-      {
-        question: "What is the ceiling height reduction?",
-        answer:
-          "Typically 150–300 mm depending on services and lighting requirements.",
-      },
-    ],
-  },
-  {
     slug: "interior-work",
     title: "Interior Work",
     shortDescription:
       "End-to-end interior execution — from concept to completion with meticulous detail.",
     metaDescription:
-      "Complete interior work services in Gujarat. End-to-end interior design and execution including aluminium, glass, ceilings, and custom fabrication.",
+      "Complete interior work services in Gujarat. End-to-end interior design and execution including aluminium, glass, and custom fabrication.",
     keywords: [
       "interior work Gujarat",
       "interior fit out",
@@ -687,7 +595,7 @@ export const SERVICES: Service[] = [
     overview: {
       title: "Interiors Executed to Perfection",
       paragraphs: [
-        "Our interior work service brings together aluminium systems, glass partitions, false ceilings, and custom fabrication under one roof. This integrated approach ensures consistency, accountability, and a seamless client experience.",
+        "Our interior work service brings together aluminium systems, glass partitions, and custom fabrication under one roof. This integrated approach ensures consistency, accountability, and a seamless client experience.",
         "We partner with architects, interior designers, and direct clients to deliver turnkey interiors for offices, retail spaces, showrooms, and premium residences.",
       ],
     },
@@ -724,7 +632,7 @@ export const SERVICES: Service[] = [
       {
         title: "Residential Interiors",
         description:
-          "Windows, doors, partitions, and ceiling packages for homes.",
+          "Windows, doors, and partition packages for homes.",
       },
       {
         title: "Custom Fabrication",
@@ -744,7 +652,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you handle complete interior projects?",
         answer:
-          "Yes. We offer turnkey interior execution including aluminium, glass, ceilings, and related works.",
+          "Yes. We offer turnkey interior execution including aluminium, glass, and related works.",
       },
       {
         question: "Can you work with our interior designer?",

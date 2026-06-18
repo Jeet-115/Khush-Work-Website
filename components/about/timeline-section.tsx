@@ -73,7 +73,7 @@ export function TimelineSection() {
                     <h3 className="font-heading text-brand-charcoal mb-2 text-lg font-semibold">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-base leading-relaxed">
                       {item.description}
                     </p>
                   </article>

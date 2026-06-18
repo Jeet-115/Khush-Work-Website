@@ -19,7 +19,7 @@ export function ServiceFaq({ service }: ServiceFaqProps) {
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+            <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
               FAQ
             </p>
             <h2 className="font-heading text-brand-charcoal mb-4 text-3xl font-semibold tracking-tight md:text-4xl">

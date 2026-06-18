@@ -39,13 +39,13 @@ export function PageHero({
 
       <Container className="relative z-20 py-24 md:py-32">
         <div className="max-w-3xl">
-          <p className="text-brand-teal motion-safe-fade-up mb-4 text-sm font-medium tracking-[0.25em] uppercase">
+          <p className="text-brand-teal-ink motion-safe-fade-up mb-4 text-sm font-semibold tracking-[0.2em] uppercase">
             {eyebrow}
           </p>
-          <h1 className="font-heading text-brand-white motion-safe-fade-up motion-delay-100 mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-brand-white motion-safe-fade-up motion-delay-100 mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
             {title}
           </h1>
-          <p className="text-brand-silver motion-safe-fade-up motion-delay-200 max-w-2xl text-base leading-relaxed md:text-lg">
+          <p className="text-brand-mist motion-safe-fade-up motion-delay-200 max-w-2xl text-lg leading-relaxed md:text-xl">
             {description}
           </p>
         </div>

@@ -105,7 +105,7 @@ export const TIMELINE: TimelineItem[] = [
     year: "2020",
     title: "Interior Solutions",
     description:
-      "Launched glass partitions, false ceiling, and complete interior execution services.",
+      "Launched glass partitions and complete interior execution services.",
   },
   {
     year: "2023",

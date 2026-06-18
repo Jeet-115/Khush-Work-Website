@@ -1,6 +1,6 @@
-import { Outfit, Poppins } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
-export const fontSans = Poppins({
+export const fontSans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -10,10 +10,10 @@ export const fontSans = Poppins({
   fallback: ["system-ui", "Segoe UI", "sans-serif"],
 });
 
-export const fontHeading = Outfit({
+export const fontHeading = Plus_Jakarta_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["600", "700"],
   display: "swap",
   preload: false,
   adjustFontFallback: true,

@@ -1,13 +1,13 @@
-import type { ServiceSlug } from "@/types/services";
-
 export type ProjectSlug =
-  | "skyline-residence"
-  | "meridian-tower"
-  | "villa-serene"
-  | "horizon-mall"
-  | "azure-office"
-  | "riverside-penthouse"
-  | "techpark-atrium";
+  | "axis-bank"
+  | "factory"
+  | "gsfc-uni-acp-work"
+  | "house"
+  | "indian-oil-pump"
+  | "maruti-public-charitable-trust"
+  | "residency"
+  | "vip-bags"
+  | "yusuf-pathan-home";
 
 export type ProjectGalleryImage = {
   src: string;
@@ -15,7 +15,7 @@ export type ProjectGalleryImage = {
 };
 
 export type ProjectServiceUsed = {
-  slug: ServiceSlug;
+  slug: import("@/types/services").ServiceSlug;
   title: string;
 };
 

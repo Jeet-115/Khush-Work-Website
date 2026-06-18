@@ -17,7 +17,7 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
     <Section spacing="lg" background="muted" aria-label="Service gallery" defer>
       <Container>
         <div className="mb-12 text-center md:mb-16">
-          <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+          <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
             Gallery
           </p>
           <h2 className="font-heading text-brand-charcoal text-3xl font-semibold tracking-tight md:text-4xl">
@@ -33,8 +33,8 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{
-                duration: 0.45,
-                delay: index * 0.08,
+                duration: 0.4,
+                delay: Math.min(index * 0.02, 0.24),
                 ease: luxuryEase,
               }}
               className={cn(

@@ -46,7 +46,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           <h1 className="font-heading text-brand-white mb-4 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
             {project.name}
           </h1>
-          <p className="text-brand-silver flex items-center gap-2 text-base md:text-lg">
+          <p className="text-brand-mist flex items-center gap-2 text-base md:text-lg">
             <MapPin className="size-5 shrink-0" aria-hidden="true" />
             {project.location}
           </p>

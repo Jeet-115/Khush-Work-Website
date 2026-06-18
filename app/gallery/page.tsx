@@ -4,8 +4,11 @@ import { PageHero } from "@/components/shared/page-hero";
 import { BreadcrumbJsonLd } from "@/components/seo";
 import { GALLERY_CONTENT } from "@/constants/gallery";
 import { BREADCRUMB_HOME, PAGE_SEO } from "@/constants/seo";
+import { getGalleryHeroImage } from "@/lib/gallery";
 import { createPageMetadata } from "@/lib/metadata";
 import { DynamicContactCtaSection } from "@/lib/performance";
+
+const galleryHero = getGalleryHeroImage();
 
 export const metadata = createPageMetadata({
   title: PAGE_SEO.gallery.title,
@@ -28,8 +31,8 @@ export default function GalleryPage() {
         eyebrow={GALLERY_CONTENT.eyebrow}
         title="Visual Portfolio"
         description="A curated collection of our finest aluminium and glass installations."
-        image="/images/gallery/aluminium-windows-01.svg"
-        imageAlt="Shree Chamunda Aluminium project gallery"
+        image={galleryHero.src}
+        imageAlt={galleryHero.alt}
         ariaLabel="Gallery page hero"
       />
       <GallerySection />

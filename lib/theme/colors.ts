@@ -42,6 +42,12 @@ export const colors = {
     800: "#383F49",
     900: "#1C232C",
   },
+  slate: {
+    DEFAULT: "#5C6370",
+  },
+  mist: {
+    DEFAULT: "#D1D5DB",
+  },
   lightGrey: {
     DEFAULT: "#F4F4F5",
     50: "#FAFAFA",

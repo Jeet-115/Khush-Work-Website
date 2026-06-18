@@ -24,7 +24,7 @@ export function TrustMarquee() {
           <span
             key={item}
             className={cn(
-              "text-brand-silver flex shrink-0 items-center gap-3 px-4 text-sm font-medium tracking-wide uppercase",
+              "text-brand-mist flex shrink-0 items-center gap-3 px-4 text-base font-medium tracking-wide uppercase",
             )}
           >
             <span

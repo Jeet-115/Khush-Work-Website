@@ -41,7 +41,7 @@ export function FeatureCard({
       </div>
       <h3
         className={cn(
-          "font-heading mb-2 text-lg font-semibold",
+          "font-heading mb-2 text-xl font-semibold",
           isGlass ? "text-brand-white" : "text-brand-charcoal",
         )}
       >
@@ -49,8 +49,8 @@ export function FeatureCard({
       </h3>
       <p
         className={cn(
-          "text-sm leading-relaxed",
-          isGlass ? "text-brand-silver" : "text-muted-foreground",
+          "text-base leading-relaxed",
+          isGlass ? "text-brand-mist" : "text-muted-foreground",
         )}
       >
         {description}

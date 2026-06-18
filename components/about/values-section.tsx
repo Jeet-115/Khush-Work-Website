@@ -41,7 +41,7 @@ export function ValuesSection() {
                 <h3 className="font-heading text-brand-charcoal mb-2 text-lg font-semibold">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {value.description}
                 </p>
               </m.article>

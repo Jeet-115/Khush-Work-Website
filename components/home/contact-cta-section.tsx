@@ -69,10 +69,10 @@ export function ContactCtaSection() {
                     />
                   </div>
                   <div>
-                    <p className="text-brand-white/70 text-xs font-medium tracking-wider uppercase">
+                    <p className="text-brand-white/85 text-sm font-semibold tracking-wider uppercase">
                       {method.label}
                     </p>
-                    <p className="text-brand-white mt-1 text-sm font-medium">
+                    <p className="text-brand-white mt-1 text-base font-medium">
                       {method.value}
                     </p>
                   </div>

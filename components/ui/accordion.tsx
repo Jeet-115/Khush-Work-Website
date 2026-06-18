@@ -113,7 +113,7 @@ function AccordionItem({
           data-slot="accordion-trigger"
           className={cn(
             "flex w-full items-center justify-between gap-4 px-6 py-5 text-left",
-            "font-heading text-brand-charcoal text-base font-medium",
+            "font-heading text-brand-charcoal text-lg font-semibold",
             "hover:bg-brand-light-grey/50 duration-normal transition-colors",
             "focus-visible:ring-brand-teal focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
           )}
@@ -138,7 +138,7 @@ function AccordionItem({
         aria-labelledby={buttonId}
         hidden={!isOpen}
         className={cn(
-          "text-muted-foreground px-6 pb-5 text-sm leading-relaxed",
+          "text-muted-foreground px-6 pb-5 text-base leading-relaxed",
           !isOpen && "hidden",
         )}
       >

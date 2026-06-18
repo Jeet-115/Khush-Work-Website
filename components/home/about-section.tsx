@@ -28,7 +28,7 @@ export function AboutSection() {
                 <p className="font-heading text-brand-teal mb-1 text-3xl font-semibold sm:text-4xl">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="text-muted-foreground text-sm">{stat.label}</p>
+                <p className="text-muted-foreground text-base">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -38,7 +38,7 @@ export function AboutSection() {
           <div className="bg-brand-teal flex size-12 shrink-0 items-center justify-center rounded-xl">
             <Users className="size-6" aria-hidden="true" />
           </div>
-          <p className="text-brand-silver text-sm leading-relaxed md:text-base">
+          <p className="text-brand-mist text-base leading-relaxed md:text-lg">
             Our professional team of fabricators, installers, and project
             managers ensures every detail meets the highest standards of
             architectural aluminium craftsmanship.

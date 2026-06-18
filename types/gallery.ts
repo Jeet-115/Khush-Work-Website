@@ -5,7 +5,7 @@ export type GalleryCategory =
   | "glass-partitions"
   | "acp-cladding"
   | "structural-glazing"
-  | "false-ceiling"
+  | "office-partitions"
   | "interior-work";
 
 export type GalleryItem = {

@@ -54,11 +54,11 @@ export function ProjectCard({
             <h3 className="font-heading text-brand-white text-2xl font-semibold md:text-3xl">
               {title}
             </h3>
-            <p className="text-brand-silver flex items-center gap-2 text-sm">
+            <p className="text-brand-mist flex items-center gap-2 text-base">
               <MapPin className="size-4 shrink-0" aria-hidden="true" />
               {location}
             </p>
-            <span className="text-brand-white mt-2 inline-flex items-center gap-2 text-sm font-medium">
+            <span className="text-brand-white mt-2 inline-flex items-center gap-2 text-base font-medium">
               View Project
               <ArrowUpRight
                 className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

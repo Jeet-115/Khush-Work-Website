@@ -5,7 +5,6 @@ import {
   Layers,
   LayoutGrid,
   Paintbrush,
-  PanelTop,
   Square,
   type LucideIcon,
 } from "lucide-react";
@@ -19,7 +18,6 @@ export const SERVICE_ICONS: Record<ServiceSlug, LucideIcon> = {
   "acp-cladding": Layers,
   "structural-glazing": Building2,
   "office-partitions": LayoutGrid,
-  "false-ceiling": PanelTop,
   "interior-work": Paintbrush,
 };
 

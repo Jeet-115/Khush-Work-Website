@@ -67,7 +67,7 @@ export function ProjectCompletion({ project }: ProjectCompletionProps) {
                   }}
                   className="bg-brand-white/5 border-brand-white/10 rounded-xl border p-6"
                 >
-                  <dt className="text-brand-silver mb-2 flex items-center gap-2 text-xs font-medium tracking-wider uppercase">
+                  <dt className="text-brand-mist mb-2 flex items-center gap-2 text-xs font-medium tracking-wider uppercase">
                     <Icon
                       className="text-brand-teal size-4"
                       aria-hidden="true"

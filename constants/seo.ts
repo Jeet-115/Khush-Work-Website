@@ -44,7 +44,7 @@ export const PAGE_SEO = {
   services: {
     title: "Aluminium & Glass Services in Vadodara",
     description:
-      "Explore aluminium windows, sliding doors, glass partitions, ACP cladding, structural glazing, false ceiling, and interior work by Shree Chamunda Aluminium in Vadodara.",
+      "Explore aluminium windows, sliding doors, glass partitions, ACP cladding, structural glazing, and interior work by Shree Chamunda Aluminium in Vadodara.",
     keywords: [...PRIMARY_KEYWORDS, "aluminium services vadodara"],
     path: "/services",
   },

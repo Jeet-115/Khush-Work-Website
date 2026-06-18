@@ -87,7 +87,7 @@ export function GalleryLightbox({
                   {activeItem.title}
                 </p>
                 <p
-                  className="text-brand-silver text-sm"
+                  className="text-brand-mist text-sm"
                   aria-live="polite"
                   aria-atomic="true"
                 >

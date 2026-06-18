@@ -8,7 +8,6 @@ import {
   Layers,
   LayoutGrid,
   Paintbrush,
-  PanelTop,
   Sparkles,
   Square,
   Star,
@@ -94,13 +93,6 @@ export const SERVICES: ServiceItem[] = [
     description:
       "Modular office systems that balance privacy, acoustics, and contemporary aesthetics.",
     href: "/services/office-partitions",
-  },
-  {
-    icon: PanelTop,
-    title: "False Ceiling",
-    description:
-      "Refined ceiling solutions integrating lighting, HVAC, and clean architectural lines.",
-    href: "/services/false-ceiling",
   },
   {
     icon: Paintbrush,
@@ -190,7 +182,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What types of aluminium systems do you offer?",
     answer:
-      "We offer aluminium windows, sliding doors, glass partitions, ACP cladding, structural glazing, office partitions, false ceilings, and complete interior solutions tailored to your project.",
+      "We offer aluminium windows, sliding doors, glass partitions, ACP cladding, structural glazing, office partitions, and complete interior solutions tailored to your project.",
   },
   {
     question: "Do you provide free site visits and quotations?",

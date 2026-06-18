@@ -20,7 +20,7 @@ export function ServiceOverview({ service }: ServiceOverviewProps) {
           transition={{ duration: 0.6, ease: luxuryEase }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="text-brand-teal mb-3 text-sm font-medium tracking-[0.2em] uppercase">
+          <p className="text-brand-teal-ink mb-3 text-sm font-semibold tracking-[0.18em] uppercase">
             Overview
           </p>
           <h2 className="font-heading text-brand-charcoal mb-8 text-3xl font-semibold tracking-tight md:text-4xl">

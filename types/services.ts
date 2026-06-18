@@ -5,7 +5,6 @@ export type ServiceSlug =
   | "acp-cladding"
   | "structural-glazing"
   | "office-partitions"
-  | "false-ceiling"
   | "interior-work";
 
 export type ServiceBenefit = {

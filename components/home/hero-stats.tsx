@@ -15,7 +15,7 @@ export function HeroStats({ stats }: HeroStatsProps) {
           <p className="font-heading text-brand-white text-2xl font-semibold sm:text-3xl">
             <AnimatedCounter value={stat.value} suffix={stat.suffix} />
           </p>
-          <p className="text-brand-silver mt-1 text-xs sm:text-sm">
+          <p className="text-brand-mist mt-1 text-sm sm:text-base">
             {stat.label}
           </p>
         </div>
