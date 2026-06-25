@@ -1,6 +1,5 @@
 "use client";
 
-import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 type UseAnimatedCounterOptions = {
@@ -14,12 +13,9 @@ export function useAnimatedCounter(
 ) {
   const { duration = 2000, start = 0 } = options;
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [value, setValue] = useState(start);
 
   useEffect(() => {
-    if (!isInView) return;
-
     let frameId = 0;
     const startTime = performance.now();
 
@@ -36,8 +32,10 @@ export function useAnimatedCounter(
 
     frameId = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(frameId);
-  }, [isInView, target, duration, start]);
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
+  }, [target, duration, start]);
 
   return { ref, value };
 }

@@ -30,11 +30,10 @@ export type StatItem = {
 };
 
 export const ABOUT_STATS: StatItem[] = [
-  { label: "Years Experience", value: 10, suffix: "+" },
-  { label: "Projects Completed", value: 500, suffix: "+" },
-  { label: "Happy Customers", value: 1000, suffix: "+" },
-  { label: "Premium Materials", value: 100, suffix: "%" },
-  { label: "Professional Team", value: 50, suffix: "+" },
+  { label: "Years Experience", value: 20, suffix: "+" },
+  { label: "Projects Completed", value: 10000, suffix: "+" },
+  { label: "Happy Customers", value: 10000, suffix: "+" },
+  { label: "Professional Team", value: 10, suffix: "+" },
 ];
 
 export const ABOUT_CONTENT = {

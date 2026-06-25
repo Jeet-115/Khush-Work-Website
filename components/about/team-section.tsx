@@ -1,7 +1,6 @@
 "use client";
 
 import { m } from "framer-motion";
-import { OptimizedImage } from "@/components/shared/optimized-image";
 import { SectionHeader } from "@/components/shared/section-header";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -32,16 +31,6 @@ export function TeamSection() {
               }}
               className="bg-brand-white shadow-card hover:shadow-luxury group duration-normal overflow-hidden rounded-xl border transition-shadow"
             >
-              <div className="bg-brand-light-grey relative aspect-square overflow-hidden">
-                <OptimizedImage
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  sizePreset="gallery"
-                  className="duration-slow object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="from-brand-charcoal/50 duration-normal absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              </div>
               <div className="p-6">
                 <h3 className="font-heading text-brand-charcoal text-lg font-semibold">
                   {member.name}

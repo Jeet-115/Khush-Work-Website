@@ -17,10 +17,11 @@ export function AnimatedCounter({
   duration,
 }: AnimatedCounterProps) {
   const { ref, value: display } = useAnimatedCounter(value, { duration });
+  const formattedValue = new Intl.NumberFormat("en-US").format(display);
 
   return (
     <span ref={ref} className={cn("tabular-nums", className)}>
-      {display}
+      {formattedValue}
       {suffix}
     </span>
   );

@@ -26,7 +26,7 @@ export const COMPANY_STORY = {
     "We partnered with architects, builders, and homeowners who demanded more — slimmer profiles, tighter tolerances, and finishes that elevate every facade. That pursuit of excellence shaped our culture and our craft.",
     "Today, we deliver end-to-end solutions from design consultation and fabrication to installation and after-sales support. Every project carries our signature: premium materials, expert execution, and an unwavering commitment to quality.",
   ],
-  image: "/images/about/company-story.svg",
+  image: "/images/about/about-img.PNG",
 } as const;
 
 export const MISSION = {
@@ -90,25 +90,25 @@ export type TimelineItem = {
 
 export const TIMELINE: TimelineItem[] = [
   {
-    year: "2014",
+    year: "2002",
     title: "The Beginning",
     description:
       "Founded in Rajkot with a focus on precision aluminium window fabrication for local residences.",
   },
   {
-    year: "2017",
+    year: "2007",
     title: "Commercial Expansion",
     description:
       "Expanded into commercial facades, sliding systems, and structural glazing for office towers.",
   },
   {
-    year: "2020",
+    year: "2012",
     title: "Interior Solutions",
     description:
       "Launched glass partitions and complete interior execution services.",
   },
   {
-    year: "2023",
+    year: "2017",
     title: "500+ Projects",
     description:
       "Crossed 500 completed projects across Gujarat with a growing team of skilled professionals.",
@@ -125,7 +125,6 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string;
-  image: string;
 };
 
 export const TEAM: TeamMember[] = [
@@ -133,25 +132,21 @@ export const TEAM: TeamMember[] = [
     name: "Rajesh Chamunda",
     role: "Founder & Managing Director",
     bio: "Two decades of fabrication expertise driving quality and innovation across every project.",
-    image: "/images/about/team-1.svg",
   },
   {
     name: "Amit Patel",
     role: "Head of Operations",
     bio: "Ensures seamless project delivery from measurement to installation with meticulous planning.",
-    image: "/images/about/team-2.svg",
   },
   {
     name: "Priya Shah",
     role: "Design Consultant",
     bio: "Translates architectural visions into practical, beautiful aluminium and glass systems.",
-    image: "/images/about/team-3.svg",
   },
   {
     name: "Vikram Mehta",
     role: "Installation Lead",
     bio: "Leads our expert installation crews with a focus on precision fitting and site safety.",
-    image: "/images/about/team-4.svg",
   },
 ];
 
