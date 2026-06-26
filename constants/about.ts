@@ -129,24 +129,9 @@ export type TeamMember = {
 
 export const TEAM: TeamMember[] = [
   {
-    name: "Rajesh Chamunda",
-    role: "Founder & Managing Director",
-    bio: "Two decades of fabrication expertise driving quality and innovation across every project.",
-  },
-  {
-    name: "Amit Patel",
-    role: "Head of Operations",
-    bio: "Ensures seamless project delivery from measurement to installation with meticulous planning.",
-  },
-  {
-    name: "Priya Shah",
-    role: "Design Consultant",
-    bio: "Translates architectural visions into practical, beautiful aluminium and glass systems.",
-  },
-  {
-    name: "Vikram Mehta",
-    role: "Installation Lead",
-    bio: "Leads our expert installation crews with a focus on precision fitting and site safety.",
+    name: "Bharat Mistry",
+    role: "Founder & Owner",
+    bio: "Bharat Mistry founded Shree Chamunda Aluminium with a clear commitment to craftsmanship, honest service, and long-term quality. He personally guides project standards from consultation to final installation, ensuring every space reflects precision, durability, and thoughtful design.",
   },
 ];
 
@@ -165,8 +150,8 @@ export const TIMELINE_CONTENT = {
 } as const;
 
 export const TEAM_CONTENT = {
-  eyebrow: "Our Team",
-  title: "The People Behind the Precision",
+  eyebrow: "Our Leadership",
+  title: "Meet the Founder",
   description:
-    "A dedicated team of fabricators, designers, and installers committed to architectural excellence.",
+    "Our company is led by Founder & Owner Bharat Mistry, whose hands-on leadership drives our quality, reliability, and client-first approach.",
 } as const;

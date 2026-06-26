@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { TEAM, TEAM_CONTENT } from "@/constants/about";
 import { luxuryEase } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 
 export function TeamSection() {
   return (
@@ -17,7 +18,14 @@ export function TeamSection() {
           description={TEAM_CONTENT.description}
         />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          className={cn(
+            "grid gap-8",
+            TEAM.length === 1
+              ? "mx-auto max-w-3xl grid-cols-1"
+              : "sm:grid-cols-2 lg:grid-cols-4",
+          )}
+        >
           {TEAM.map((member, index) => (
             <m.article
               key={member.name}
